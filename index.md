@@ -1,5 +1,5 @@
 ---
-title: A sample blog
+title: "A sample blog"
 ---
 
 start of sharing
