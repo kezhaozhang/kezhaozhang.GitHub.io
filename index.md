@@ -1,5 +1,5 @@
 ---
-title: "Welcome to my blog"
+title: A sample blog
 ---
 
-I'm glad you are here. I plan to talk about ...
+start of sharing
