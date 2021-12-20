@@ -1,5 +1,7 @@
 ---
-title: "Welcome to my blog"
+A Sample Blog Is Born
 ---
 
-I'm glad you are here. I plan to talk about ...
+This indeed is facinating, and the beginning of sharing...
+
+$\sum \alpha_i = \beta$
