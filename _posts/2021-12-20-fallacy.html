@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+
+  <style>
+    html {
+      line-height: 1.25;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 56em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+<head><title>Solution to An Example in Bernoulli&#8217;s Fallacy</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html,mathjax --> 
+<meta name="src" content="fallacy.tex"> 
+<link rel="stylesheet" type="text/css" href="fallacy.css"> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>  
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Solution to An Example in Bernoulli&#8217;s Fallacy</h2>
+<div class="author" ></div><br />
+<div class="date" ><span 
+class="cmr-12">December 20, 2021</span></div>
+   </div>
+<div class="center" 
+>
+<!--l. 41--><p class="noindent" >
+<!--l. 41--><p class="noindent" ><span 
+class="cmbx-9">Abstract</span></div>
+     <!--l. 42--><p class="indent" >    <span 
+class="cmr-9">In this note, we solve an example question in Bernoulli&#8217;s Fallacy using</span>
+     <span 
+class="cmr-9">three approaches: (1) maximum likelihood, (2) Bayes&#8217; theorem, and (3)</span>
+     <span 
+class="cmr-9">MCMC simulation using the PyMC3 package in Python.</span>
+       <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-9">1   </span></span> <a 
+ id="x1-10001"></a><span 
+class="cmr-9">Problem Statement</span></h3>
+     <!--l. 49--><p class="noindent" ><span 
+class="cmr-9">Your friend rolls a six-sided die and secretly records the outcome; this number</span>
+     <span 
+class="cmr-9">becomes the target</span> \(T\)<span 
+class="cmr-9">. You then put on a blindfold and roll the same six-sided die</span>
+     <span 
+class="cmr-9">over and over. You&#8217;re unable to see how it lands so, each time, your friend</span>
+     <span 
+class="cmr-9">(under the watchful eye of a judge, to prevent any cheating) tells you </span><span 
+class="cmti-9">only</span>
+     <span 
+class="cmr-9">whether the number you just rolled was greater than, equal to, or less than</span> \(T\)<span 
+class="cmr-9">.</span>
+     <span 
+class="cmr-9">After some number of rolls, say 10, you must guess what the target was.</span>
+     <span 
+class="cmr-9">What would your strategy for guessing, and how confident would you</span>
+     <span 
+class="cmr-9">be?</span>
+     <!--l. 51--><p class="indent" >     <span 
+class="cmr-9">Suppose the sequences of the outcomes is</span>
+     <div class="center" 
+>
+<!--l. 53--><p class="noindent" >
+<!--l. 54--><p class="noindent" ><span 
+class="cmr-9">G, G, L, E, L, L, L, E, G, L</span></div>
+  <!--l. 56--><p class="noindent" ><span 
+class="cmr-9">with G representing a greater roll, L a lesser roll, and E an equal roll.</span>
+     <!--l. 58--><p class="indent" >     <span 
+class="cmr-9">p.36 of Bernoulli&#8217;s Fallacy.</span>
+                                                                  
+
+                                                                  
+     <!--l. 60--><p class="noindent" >
+       <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-9">2   </span></span> <a 
+ id="x1-20002"></a><span 
+class="cmr-9">Solution</span></h3>
+     <!--l. 62--><p class="noindent" ><span 
+class="cmr-9">Because each roll in the sequence is independent, the order of the outcomes is</span>
+     <span 
+class="cmr-9">unimportant. The number of each type of rolls are important and in the</span>
+     <span 
+class="cmr-9">sequence of 10 outcomes, the number of greater rolls, equal rolls and less rolls</span>
+     <span 
+class="cmr-9">are</span>
+     <!--l. 69--><p class="indent" >     \begin {align*} N_G &amp;= 3, \\ N_E &amp; = 2, \\ N_L &amp; = 5. \end {align*}
+     <!--l. 72--><p class="noindent" >
+       <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-9">2.1   </span></span> <a 
+ id="x1-30002.1"></a><span 
+class="cmr-9">Maximum Likelihood</span></h4>
+     <!--l. 74--><p class="noindent" ><span 
+class="cmr-9">Maximum likelihood finds the best target value</span> \(T\) <span 
+class="cmr-9">that maximizes the likelihood:</span>
+     \begin {equation} p(\mathrm {sequence}|T) = \left (\frac {6-T}{6}\right )^{N_G} \left (\frac {1}{6}\right )^{N_E} \left (\frac {T-1}{6}\right )^{N_L}, \label {eqn_likelihood} \end {equation}
+     <span 
+class="cmr-9">where</span> \(\frac {T-1}{6}\)<span 
+class="cmr-9">,</span> \(\frac {1}{6}\)<span 
+class="cmr-9">, and</span> \(\frac {T-1}{6}\) <span 
+class="cmr-9">are the probability to get a greater roll, an equal roll and a less</span>
+     <span 
+class="cmr-9">roll, respectively.</span>
+     <!--l. 81--><p class="indent" >     <span 
+class="cmr-9">We can calculate the value of Equation</span><span 
+class="cmr-9">&#x00A0;(</span><span 
+class="cmbx-9">1</span><span 
+class="cmr-9">) for each of possible values of</span> \(T\)<span 
+class="cmr-9">,</span>
+     <span 
+class="cmr-9">1, 2, 3, 4, 5, and 6 in this case, and find the</span> \(T\) <span 
+class="cmr-9">corresponding to the largest</span>
+     <span 
+class="cmr-9">value.</span>
+     <div class="center" 
+>
+<!--l. 83--><p class="noindent" >
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+ 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11">\(T\)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11"><span 
+class="cmr-9">Likelihood</span></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11"><span 
+class="cmr-9">1</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11"> <span 
+class="cmr-9">0</span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11"><span 
+class="cmr-9">2</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11">    \(64\times 6^{-10}\)    </td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11"><span 
+class="cmr-9">3</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11">  \(864\times 6^{-10}\)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11"><span 
+class="cmr-9">3</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11">    \(1944\times 6^{-10}\)    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11"><span 
+class="cmr-9">5</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
+class="td11">    \(1024\times 6^{-10}\)    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11"><span 
+class="cmr-9">6</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-2"  
+class="td11">    <span 
+class="cmr-9">0      </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-1"  
+class="td11"> </td></tr></table></div></div>
+     <!--l. 97--><p class="indent" >   <span 
+class="cmr-9">From the table we can see that the likelihood is the largest when</span> \(T=4\)<span 
+class="cmr-9">.</span>
+     <span 
+class="cmr-9">Therefore,</span> \(T=4\) <span 
+class="cmr-9">is the best guess. However, maximum likelihood does not provide</span>
+     <span 
+class="cmr-9">confidence or variation estimate of</span> \(T\)<span 
+class="cmr-9">. We will use Bayes&#8217; theorem for</span>
+     <span 
+class="cmr-9">that.</span>
+     <!--l. 99--><p class="noindent" >
+       <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-9">2.2   </span></span> <a 
+ id="x1-40002.2"></a><span 
+class="cmr-9">Bayes&#8217; Theorem</span></h4>
+     <!--l. 101--><p class="noindent" ><span 
+class="cmr-9">Using Bayes&#8217; theorem</span>
+     <!--l. 103--><p class="noindent" >
+       <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-9">2.3   </span></span> <a 
+ id="x1-50002.3"></a><span 
+class="cmr-9">Probabilistic Programming using PyMC3</span></h4>
+       <!--l. 105-->
+<div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-5001r1"></a><span 
+class="cmr-5">1</span></span><span 
+class="cmtt-8">import</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">numpy</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">as</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">np</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5002r2"></a><span 
+class="cmr-5">2</span></span><span 
+class="cmtt-8">import</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pymc3</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">as</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pm</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5003r3"></a><span 
+class="cmr-5">3</span></span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5004r4"></a><span 
+class="cmr-5">4</span></span><span 
+class="cmtt-8">nL</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">5</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5005r5"></a><span 
+class="cmr-5">5</span></span><span 
+class="cmtt-8">nE</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">2</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5006r6"></a><span 
+class="cmr-5">6</span></span><span 
+class="cmtt-8">nG</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">3</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5007r7"></a><span 
+class="cmr-5">7</span></span><span 
+class="cmtt-8">with</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pm</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">Model</span><span 
+class="cmtt-8">()</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">as</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">model</span><span 
+class="cmtt-8">:</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5008r8"></a><span 
+class="cmr-5">8</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">#</span><span 
+class="cmtt-8">Discrete</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">uniform</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">prior</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5009r9"></a><span 
+class="cmr-5">9</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">T</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pm</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">DiscreteUniform</span><span 
+class="cmtt-8">(</span><span 
+class="cmtt-8">&#8217;</span><span 
+class="cmtt-8">T</span><span 
+class="cmtt-8">&#8217;</span><span 
+class="cmtt-8">,</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">1,</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">6)</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5010r10"></a><span 
+class="cmr-5">10</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">#</span><span 
+class="cmtt-8">log</span><span 
+class="cmtt-8">-</span><span 
+class="cmtt-8">likelihood</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5011r11"></a><span 
+class="cmr-5">11</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">logp</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">nL</span><span 
+class="cmtt-8">*</span><span 
+class="cmtt-8">np</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">log</span><span 
+class="cmtt-8">((</span><span 
+class="cmtt-8">T</span><span 
+class="cmtt-8">-1)</span><span 
+class="cmtt-8">/6)</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">+</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">nE</span><span 
+class="cmtt-8">*</span><span 
+class="cmtt-8">np</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">log</span><span 
+class="cmtt-8">(1/6)</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">+</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">nG</span><span 
+class="cmtt-8">*</span><span 
+class="cmtt-8">np</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">log</span><span 
+class="cmtt-8">((6-</span><span 
+class="cmtt-8">T</span><span 
+class="cmtt-8">)</span><span 
+class="cmtt-8">/6)</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5012r12"></a><span 
+class="cmr-5">12</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">potential</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pm</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">Potential</span><span 
+class="cmtt-8">(</span><span 
+class="cmtt-8">&#8217;</span><span 
+class="cmtt-8">potential</span><span 
+class="cmtt-8">&#8217;</span><span 
+class="cmtt-8">,</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">logp</span><span 
+class="cmtt-8">)</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5013r13"></a><span 
+class="cmr-5">13</span></span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5014r14"></a><span 
+class="cmr-5">14</span></span><span 
+class="cmtt-8">with</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">model</span><span 
+class="cmtt-8">:</span><span 
+class="cmtt-8">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-5015r15"></a><span 
+class="cmr-5">15</span></span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">trace</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">=</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">pm</span><span 
+class="cmtt-8">.</span><span 
+class="cmtt-8">sample</span><span 
+class="cmtt-8">(1000,</span><span 
+class="cmtt-8">&#x00A0;</span><span 
+class="cmtt-8">tune</span><span 
+class="cmtt-8">=1000)</span>
+       </div>
+        
+</body></html> 
+
+                                                                  
+
+
