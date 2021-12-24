@@ -1,5 +1,5 @@
 ---
-title: "Kezhao's blog"
+title: "Blog"
 ---
 
 
