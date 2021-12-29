@@ -1,8 +1,7 @@
 title: Kezhao Zhang
 author: Kezhao Zhang 
 email: kezhao.zhang@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-Learnng and practicing data analysis, machine learning, Bayesian inference and causal inference.
+description: Learnng and practicing data analysis, machine learning, Bayesian inference and causal inference.
 
 # social links
 #twitter_username: your-twitter-handle # DO NOT include the @ character, or else the build will fail!
