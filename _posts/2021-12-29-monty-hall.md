@@ -1,5 +1,6 @@
 ---
-Title: A Simple Non-Bayesian Solution to Monty Hall Problem
+title: "A Simple Non-Bayesian Solution to Monty Hall Problem"
+date: 2021-12-31
 ---
 
 
