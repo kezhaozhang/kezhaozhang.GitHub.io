@@ -3,7 +3,7 @@ title: "Numerical Solution to Monty Hall Problem using PyMC"
 typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
-We numerically solved the [Monty Hall Problem](https://en.wikipedia.org/wiki/Monty_Hall_problem) with PyMC3, a probabilistic programming package in Python. The PyMC code is adapted from [Austin Rochford](https://austinrochford.com)'s [Introduction to Probabilistic Programming with PyMC](Intro to Probabilistic Programming with PyMC).
+We numerically solved the [Monty Hall Problem](https://en.wikipedia.org/wiki/Monty_Hall_problem) with PyMC3, a probabilistic programming package in Python. The PyMC code is adapted from [Austin Rochford](https://austinrochford.com)'s [Introduction to Probabilistic Programming with PyMC](https://www.youtube.com/watch?v=Qu6-_AnRCs8).
 
 
 
