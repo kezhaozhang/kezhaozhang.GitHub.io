@@ -1,7 +1,5 @@
 ---
-
 title: Logic of Science: Review of Bernoulli's Fallacy
-typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
 The book is well researched and very lucid. The arguments for the Bayesian approach are convincing. It's a beneficial book before reading Jaynes' *Probability Theory*.
