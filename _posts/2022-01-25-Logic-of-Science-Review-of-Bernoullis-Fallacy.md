@@ -14,7 +14,7 @@ The book is well researched and very lucid. The arguments for the Bayesian appro
 
 <figure>
  <center>
-  <img src="/assets/images/fallacy_book_cover.jpeg", height="400">
+  <img src="/assets/images/fallacy_book_cover.jpeg" height="400">
  </center>
 </figure>
 
