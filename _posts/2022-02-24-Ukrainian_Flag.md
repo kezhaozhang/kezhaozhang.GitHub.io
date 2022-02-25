@@ -1,6 +1,5 @@
 ---
 title: Flag of Ukraine with Matplotlib
-typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
 In support of Ukraine and the Ukrainian people, I made a Ukrainian flag with matplotlib.
