@@ -1,5 +1,5 @@
 ---
-title: In Support of Ukraine: Flag of Ukraine with Matplotlib
+title: Flag of Ukraine with Matplotlib
 typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
