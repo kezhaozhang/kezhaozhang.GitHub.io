@@ -223,8 +223,8 @@ The PyMC model in this note is developed for linear regressions. The next step i
 
 
 $$
-y_i-\delta_i = f(x_i - \epsilon_i|\beta),
+y_i-\delta_i = f(x_i - \epsilon_i\vert\beta),
 $$
 
 
-where $f(x|\beta)$ is a nonlinear function of $x$ with model parameters $\beta$. The errors of the predicted, $y$,  and the predictor, $x$, are $\delta_i$ and $\epsilon_i$, respectively. This formulation is more general than the geometrical approach for linear regression. A different approach is likely needed. 
+where $f(x\vert\beta)$ is a nonlinear function of $x$ with model parameters $\beta$. The errors of the predicted, $y$,  and the predictor, $x$, are $\delta_i$ and $\epsilon_i$, respectively. This formulation is more general than the geometrical approach for linear regression. A different approach is likely needed. 
