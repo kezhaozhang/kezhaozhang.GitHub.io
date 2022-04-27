@@ -37,8 +37,9 @@ A linear regression model is a surface in a high-dimensional space. An orthogona
 </figure>
 
 
-
 The surface of the linear regression model is defined by
+
+
 $$
 y = X\cdot\beta + C,
 $$
@@ -47,6 +48,8 @@ where $y$ is the predicted, $X$ the predictors, $\beta$ regression coefficients,
 
 
 The perpendicular distance between a point $(X_i, y_i)$ and the surface is
+
+
 $$
 d = \frac{y_i-X_i\cdot\beta-C}{\sqrt{1+\beta^T\beta}}.\label{eq:d}
 $$
@@ -211,8 +214,9 @@ Another critical factor is the prior for the regression coefficients $\beta$. In
 </figure>
 
 
-
 The PyMC model in this note is developed for linear regressions. The next step is to create a model for nonlinear regressions using the formulation of scipy.odr and ODRPACK ([ODRPACK User’s Guide](https://docs.scipy.org/doc/external/odrpack_guide.pdf)). The equation relates the predicted and predictors
+
+
 $$
 y_i-\delta_i = f(x_i - \epsilon_i|\beta),
 $$
