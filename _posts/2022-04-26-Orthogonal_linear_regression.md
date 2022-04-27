@@ -43,6 +43,8 @@ The surface of the linear regression model is defined by
 $$
 y = X\cdot\beta + C,
 $$
+
+
 where $y$ is the predicted, $X$ the predictors, $\beta$ regression coefficients, and $C$ the intercept.
 
 
@@ -51,8 +53,11 @@ The perpendicular distance between a point $(X_i, y_i)$ and the surface is
 
 
 $$
-d = \frac{y_i-X_i\cdot\beta-C}{\sqrt{1+\beta^T\beta}}.\label{eq:d}
+d = \frac{y_i-X_i\cdot\beta-C}{\sqrt{1+\beta^T\beta}}.
+\label{eq:d}
 $$
+
+
 The value of $d$ is positive on one side of the model surface and negative on the other side and 0 when on the surface.
 
 It is reasonable to assume the distribution of $d$ is a normal distribution with zero mean. the distribution of $\beta$  can be inferred using the Markov chain Monte Carlo (MCMC) method.
@@ -220,4 +225,6 @@ The PyMC model in this note is developed for linear regressions. The next step i
 $$
 y_i-\delta_i = f(x_i - \epsilon_i|\beta),
 $$
+
+
 where $f(x|\beta)$ is a nonlinear function of $x$ with model parameters $\beta$. The errors of the predicted, $y$,  and the predictor, $x$, are $\delta_i$ and $\epsilon_i$, respectively. This formulation is more general than the geometrical approach for linear regression. A different approach is likely needed. 
