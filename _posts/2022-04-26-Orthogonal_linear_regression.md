@@ -10,7 +10,7 @@ Orthogonal regression considers the errors in both the predicted and the predict
 
 <figure>
   <center>
-  <img src="/assets/images/odr_OLS_vs_ODR.svg" height="450">
+  <img src="/assets/images/odr_OLS_vs_ODR.svg" height="450" width="800">
    </center>
   <center>
   <figurecaption>
@@ -18,6 +18,7 @@ Orthogonal regression considers the errors in both the predicted and the predict
   </figurecaption>
   </center>
 </figure>
+
 
 
 
