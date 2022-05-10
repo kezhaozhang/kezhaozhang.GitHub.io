@@ -14,6 +14,8 @@ We usually do not know the number of components in the mixture model before infe
 Using the Dirichlet process to define the priors for component weights, there is no need to specify the number of components in the model. The posterior distribution of the MCMC sampling will find the components with dominant weights.
 
 The weights of the components, $\pi_n$, in the mixture model are generated using the stick-breaking process
+
+
 $$
 \pi_n = \beta_n \Pi_{k=1}^{n-1}(1-\beta_k),
 $$
@@ -151,7 +153,7 @@ The posteriors obtained from the MCMC show two dominant components (Figure 5 and
 
 <figure>
   <center>
-  <img src="/assets/images/dp_w_posterior.svg" height="600">
+  <img src="/assets/images/dp_w_posterior.svg" height="620">
    </center>
   <center>
   <figurecaption>
@@ -196,13 +198,13 @@ $$
 $$
 
 
-where $\left<\mathrm{log\_ratio}\right>$ is the average over the posterior distributions.
+where $\left<\mathrm{log\_{ratio}}\right>$ is the average over the posterior distributions.
 
 The original two-dimensional data are plotted with the components represented by color in Figure 8. The component assignment is very comparable to that in the previous [post](https://kezhaozhang.github.io/2022/01/08/student.html).
 
 <figure>
   <center>
-  <img src="/assets/images/dp_final_xy_scatterplot.svg" height="400">
+  <img src="/assets/images/dp_final_xy_scatterplot.svg" height="350">
    </center>
   <center>
   <figurecaption>
@@ -210,6 +212,7 @@ The original two-dimensional data are plotted with the components represented by
   </figurecaption>
   </center>
 </figure>
+
 
 ## Conclusion
 
