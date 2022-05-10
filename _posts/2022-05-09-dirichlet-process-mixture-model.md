@@ -198,7 +198,7 @@ $$
 $$
 
 
-where $\left<\mathrm{log\_{ratio}}\right>$ is the average over the posterior distributions.
+where <log_ratio> is the average over the posterior distributions.
 
 The original two-dimensional data are plotted with the components represented by color in Figure 8. The component assignment is very comparable to that in the previous [post](https://kezhaozhang.github.io/2022/01/08/student.html).
 
