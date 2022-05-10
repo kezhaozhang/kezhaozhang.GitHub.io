@@ -1,7 +1,5 @@
 ---
-
-
-Title: Using Dirichlet Process in Mixture Model
+title: Dirichlet Process in Mixture Model
 typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
@@ -19,6 +17,8 @@ The weights of the components, $\pi_n$, in the mixture model are generated using
 $$
 \pi_n = \beta_n \Pi_{k=1}^{n-1}(1-\beta_k),
 $$
+
+
 where $\beta_n \sim \rm{Beta}(1, \alpha)$. 
 
 $\alpha$ is the parameter that controls the distribution of $\pi_n$. As shown in Figure 1, when $\alpha$ is small, the weight distribution is very skewed: with a few close to 1 and the rest near 0. As $\alpha$ increases the weight distribution becomes more uniform. 
@@ -39,14 +39,22 @@ $\alpha$ is the parameter that controls the distribution of $\pi_n$. As shown in
 ## Mixture Model 
 
 The generative model of the data $x$ is a combination of $K$ Student's t distributions:
+
+
 $$
 x \sim \sum_{i=1}^K \pi_i f(x\mid\mu_i, \sigma_i, \nu_i),
 $$
+
+
 where the weights $\sum_{i=1}^K\pi_i=1$, and
+
+
 $$
 f(x\mid \mu, \sigma, \nu)=\frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)}\frac{1}{\sqrt{\pi\nu}\sigma}\left[1+\frac{1}{\nu}\left(\frac{x-\mu}{\sigma}\right)^2\right]^{-\frac{\nu+1}{2}}.
 \label{eqn:student}
 $$
+
+
 In the model inference, the weights $\pi_i$ are generated with the Dirichlet process using the stick-breaking scheme.
 
 
@@ -132,7 +140,7 @@ The posteriors obtained from the MCMC show two dominant components (Figure 5 and
 
 <figure>
   <center>
-  <img src="/assets/images/dp_w_barchart.svg" height="400">
+  <img src="/assets/images/dp_w_barchart.svg" height="350">
    </center>
   <center>
   <figurecaption>
@@ -143,7 +151,7 @@ The posteriors obtained from the MCMC show two dominant components (Figure 5 and
 
 <figure>
   <center>
-  <img src="/assets/images/dp_w_posterior.svg" height="500">
+  <img src="/assets/images/dp_w_posterior.svg" height="600">
    </center>
   <center>
   <figurecaption>
@@ -156,7 +164,7 @@ The posteriors obtained from the MCMC show two dominant components (Figure 5 and
 
 <figure>
   <center>
-  <img src="/assets/images/dp_alpha_posterior.svg" height="350">
+  <img src="/assets/images/dp_alpha_posterior.svg" height="300">
    </center>
   <center>
   <figurecaption>
@@ -165,13 +173,20 @@ The posteriors obtained from the MCMC show two dominant components (Figure 5 and
   </center>
 </figure>
 
+
 #### Component Assignment
 
 We calculate the likelihood ratio for each data point $x$ as follows:
+
+
 $$
 \mathrm{log\_ratio} = \log\frac{\pi_1 f(x\vert \mu_1, \nu_1, \sigma_1)}{\pi_2 f(x\vert \mu_2, \nu_2, \sigma_2)}.
 $$
+
+
 Then the average of $\mathrm{log\_ratio}$ over posterior distributions is calculated. The component the data point belongs to is assigned according to:
+
+
 $$
 \mathrm{component} = \left\{ \begin{array}{lll}
 															1 & : & \left<\mathrm{log\_ratio}\right> >0 \\
@@ -179,6 +194,8 @@ $$
                             \end{array}
                      \right.
 $$
+
+
 where $\left<\mathrm{log\_ratio}\right>$ is the average over the posterior distributions.
 
 The original two-dimensional data are plotted with the components represented by color in Figure 8. The component assignment is very comparable to that in the previous [post](https://kezhaozhang.github.io/2022/01/08/student.html).
