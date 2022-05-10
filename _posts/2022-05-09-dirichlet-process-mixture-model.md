@@ -186,7 +186,7 @@ $$
 $$
 
 
-Then the average of $\mathrm{log\_{}ratio}$ over posterior distributions is calculated. The component the data point belongs to is assigned according to:
+Then the average of $\textrm{log\_{}ratio}$ over posterior distributions is calculated. The component the data point belongs to is assigned according to:
 
 
 $$
@@ -198,7 +198,7 @@ $$
 $$
 
 
-where $\mathrm{log\_{}ratio}$  is the average over the posterior distributions.
+where $\left<\textrm{log\_{}ratio}\right>$  is the average over the posterior distributions.
 
 The original two-dimensional data are plotted with the components represented by color in Figure 8. The component assignment is very comparable to that in the previous [post](https://kezhaozhang.github.io/2022/01/08/student.html).
 
