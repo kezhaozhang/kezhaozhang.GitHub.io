@@ -1,5 +1,6 @@
 ---
-title: Estimation of Variability From Observed Data: A Bayesian Perspective
+title: "Estimation of Variability From Observed Data: A Bayesian Perspective"
+date: 2022-05-12
 ---
 
 The uncertainty of estimates from data is a direct result of the posterior distribution of the model for the data generation. This note uses the Bayesian approach to discuss two cases, one of which explains the bootstrap method. 
