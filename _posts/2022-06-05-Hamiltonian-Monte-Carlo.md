@@ -1,7 +1,5 @@
 ---
 title: "Hamiltonian Monte Carlo vs. Metropolis"
-date: 2022-04-12
-typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
 This note compares Metropolis and Hamiltonian Monte Carlo algorithms, using autocorrelation and effective sample size as metrics. Unimodal target distribution is used in this note, and multimodal target distribution will be discussed in a future note.
@@ -16,7 +14,7 @@ Hamiltonian Monte Carlo (HMC) uses Hamiltonian dynamics to generate distant cand
 
 The Hamilton is the energy of the system:
 
- 
+
 $$
 H(q, p) = U(q) + K(p),
 $$
@@ -153,7 +151,7 @@ def hmc(U, epsilon, L, current_q):
 
 The proposed sample $x'$ is generated from a uniform distribution centered around the current value $x$:
 
- 
+
 $$
 x' \sim \mathrm{Uniform}(x-\delta, x+\delta),
 $$
@@ -333,7 +331,7 @@ The simulations in this note show that the setting of the Monte Carlo sampling s
   </center>
 </figure>
 
- 
+
 
 <figure>
   <center>
