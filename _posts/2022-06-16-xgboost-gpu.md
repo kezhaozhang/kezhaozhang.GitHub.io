@@ -1,5 +1,5 @@
 ---
-title: "XGBoost with GPUs and Multicore CPU"
+title: "XGBoost with GPUs and Multi-core CPU"
 typora-root-url: ../../kezhaozhang.GitHub.io
 ---
 
@@ -45,7 +45,7 @@ The computation time of the regression as a function of the number of CPU cores 
   </center>
 </figure>
 
-I suspected that the optimal number of cores might depend on the workload. But using a much larger dataset with 1,000,000 rows and 200 predictors: the computation time is still the smallest with 16 cores.
+I suspected that the optimal number of cores might depend on the workload. But using a much larger dataset with 1,000,000 rows and 200 predictors, the computation time is still the shortest with 16 cores.
 
 ### GPU
 
@@ -127,7 +127,7 @@ A couple of settings are essential for multiple GPUs:
 - `n_workers` in `LocalCUDACluster` can be set to 1 to use a single GPU and more than 1 for multiple GPUs.
 - The data must be converted into Dask arrays and broken into multiple chunks. If there is only a single chunk in the data, XGBoost will run on only one GPU even though `n_workers` is set to more than 1 in `LocalCUDACluster`.
 
-The GPU status can be monitored with the `nvidia-smi` command, and Figures 3 and 4 show running on a single GPU and two GPUs, respectively.
+The GPU status can be monitored with the `nvidia-smi` command, and Figures 3 and 4 show the status of running on a single GPU and two GPUs, respectively.
 
 <figure>
   <center>
