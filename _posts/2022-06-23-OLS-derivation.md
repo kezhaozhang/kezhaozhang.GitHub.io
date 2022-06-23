@@ -60,8 +60,8 @@ Hence the estimated $\beta_1$ for the observed data is
 $$
 \boxed{
 \hat{\beta_1} = \frac{\mathrm{Cov}(y,x)}{\mathrm{Var}(x)}
-\label{eqn:beta1}
 },
+\label{eqn:beta1}
 $$
 
 
