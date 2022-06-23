@@ -156,17 +156,17 @@ Plug Equation($\ref{eqn:beta1_var_2}$) into Equation($\ref{eqn:beta1_var_1}$)
 
 $$
 \boxed{
-\begin{align}\notag
+\begin{align*}\notag
 \mathrm{Var}(\hat{\beta_1}) &= \mathrm{Var}\left(\frac{\mathrm{Cov}(y, x)}{\mathrm{Var}(x)}\right) = \frac{1}{\mathrm{Var}(x)^2}\mathrm{Var}\left(\mathrm{Cov}(y,x)\right) \\ 
 &= \frac{\sigma^2}{n \mathrm{Var}(x)} 
-\end{align}
-}
+\end{align*}
+}.
 \label{eqn:beta1_var}
 $$
 
 
 
-Using Equation($\ref{eqn:beta0}$) we have
+And
 
 
 
