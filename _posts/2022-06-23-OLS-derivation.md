@@ -4,7 +4,7 @@ title: "Derivation of Linear Regression Coefficients and Their Variation with Mi
 
 
 
-This is a simple calculation of linear regression coefficients and their variation using covariance and variance with minimal need for matrix algebra.
+This is a simple calculation of linear regression coefficients and their variances using covariance and variance with minimal need for matrix algebra.
 
 
 
@@ -23,9 +23,10 @@ where $\epsilon$ is the noise.
 
 
 
-#### Estimate of $\beta_0$ and $\beta_1$
+### Estimate of $\beta_0$ and $\beta_1$
 
 Calculate the covariance of $y$ and $x$, we have
+
 
 $$
 \begin{array}{cc}
@@ -33,21 +34,27 @@ $$
  & = \beta_1 \mathrm{Var}(x) + \mathrm{Cov}(\epsilon, x)
 \end{array} \notag
 $$
+
+
 If with the **homoscedasticity** assumption, i.e.,  $x$ and noise $\epsilon$ are independent, 
+
 
 
 $$
 \mathrm{Cov}(\epsilon, x) =0.
 $$
-Then
 
+
+Then
 
 $$
 \mathrm{Cov}(y,x)  =\beta_1 \mathrm{Var}(x). \notag
 $$
 
 
+
 Hence the estimated $\beta_1$ for the observed data is
+
 
 
 $$
@@ -63,9 +70,11 @@ where the hat symbol indicates an estimate from observed data.
 In Equation ($\ref{eqn:linear}$), take the expected value or the mean of both sides of the equation, and we have
 
 
+
 $$
 \langle{y}\rangle = \beta_0 +\beta_1 \langle{x}\rangle, \notag
 $$
+
 
 
 where $\langle y\rangle$ and $\langle{x}\rangle$ are the expected values or mean of $y$ and $x$, respectively; and $\langle{\epsilon}\rangle=0$.
@@ -80,11 +89,12 @@ $$
 $$
 
 
-#### Variance of $\hat{\beta_0}$ and $\hat{\beta_1}$
+### Variance of $\hat{\beta_0}$ and $\hat{\beta_1}$
 
 For given observed data $x$ and $y$, the variation of the estimated coefficients is due to the noise $\epsilon$.
 
 From Equation ($\ref{eqn:beta1_hat}$):
+
 
 
 $$
@@ -92,7 +102,9 @@ $$
 $$
 
 
+
 where
+
 
 
 $$
@@ -102,6 +114,7 @@ $$
 &= \mathrm{Var}\left(\mathrm{Cov}(\epsilon, x)\right)
 \end{align}
 $$
+
 
 
 In the derivation above, we have used the following:
@@ -114,12 +127,15 @@ In the derivation above, we have used the following:
 Suppose there are $n$ values of $x$: $x_1, x_2, \ldots, x_n$ and corresponding noise values $\epsilon_1, \epsilon_2, \ldots, \epsilon_n$, then
 
 
+
 $$
 \mathrm{Cov}(\epsilon, x)=\frac{1}{n}\sum_{i=1}^n \epsilon_i (x_i-\bar{x}). \notag
 $$
 
 
+
 Further, assume that $\epsilon_i$ are **i.i.d. random variables**  and $\mathrm{Var}(\epsilon_i)=\sigma^2$, then
+
 
 
 $$
@@ -132,7 +148,10 @@ $$
 \end{array}
 \label{eqn:beta1_var_2}
 $$
+
+
 Plug Equation($\ref{eqn:beta1_var_2}$) into Equation($\ref{eqn:beta1_var_1}$)
+
 
 
 $$
@@ -146,7 +165,9 @@ $$
 $$
 
 
+
 Using Equation($\ref{eqn:beta0}$) we have
+
 
 
 $$
@@ -157,7 +178,9 @@ $$
 $$
 
 
+
 Because $\mathrm{Var}(\langle{y}\rangle)= \frac{1}{n}\sigma^2$, 
+
 
 
 $$
@@ -165,6 +188,7 @@ $$
 \mathrm{Var}(\hat{\beta_0})=\frac{\sigma^2}{n} + \frac{\sigma^2 \langle{x}\rangle^2}{n \mathrm{Var}(x)} = \frac{\sigma^2 \langle{x^2}\rangle}{n}
 },\label{eqn:beta0_var}
 $$
+
 
 
 where $\mathrm{Var}(x) = \langle{x^2}\rangle- \langle{x}\rangle^2$ is used in the final step of the equation. 
@@ -176,9 +200,12 @@ where $\mathrm{Var}(x) = \langle{x^2}\rangle- \langle{x}\rangle^2$ is used in th
 The linear relationship between the predicted $y$ and the predictor $\vec{x}$ is
 
 
+
 $$
 y = \beta_0 + \vec{x}\beta +\epsilon,
 $$
+
+
 
 where $\vec{x}$ is a $p$-dimensional multivariate variable: $\vec{x} = \left[ x_1\ldots,x_i\ldots,x_p\right]^T$ where each element $x_i$ is a variable that has $n$ values in measurement. $\beta$ is also a $p$-dimensional vector and $\beta_0$ is a scalar.
 
@@ -186,14 +213,17 @@ where $\vec{x}$ is a $p$-dimensional multivariate variable: $\vec{x} = \left[ x_
 
 Calculating the covariance of $y$ and $\vec{x}$, we have
 
+
 $$
 \mathrm{Cov}(y,\vec{x}) = \mathrm{Cov}(\vec{x}, \vec{x})\beta+\mathrm{Cov}(\epsilon, \vec{x}) = \mathrm{Cov}(\vec{x}, \vec{x})\beta,
 $$
 
 
+
 where in the last step, homoscedasticity is assumed: $\mathrm{Cov}(\epsilon, \vec{x}=0)$.
 
 Then 
+
 
 
 $$
@@ -203,7 +233,9 @@ $$
 $$
 
 
+
 where $A$ is the covariance matrix of $\vec{x}$:
+
 
 
 $$
@@ -211,7 +243,9 @@ A  = \mathrm{Cov}(\vec{x}, \vec{x}).
 $$
 
 
+
 The estimate of $\beta_0$ is
+
 
 
 $$
@@ -220,7 +254,10 @@ $$
 }.
 $$
 
+
+
 ### Variance
+
 
 
 $$
@@ -233,9 +270,11 @@ $$
 $$
 
 
+
 where superscript $\circ 2$ denotes element-wise squared (see [Hadamard Product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices))).
 
 For a component of $\vec{x}$,  $x_i$, let $n$ be the number of measurements, then 
+
 
 
 $$
@@ -247,7 +286,10 @@ $$
 $$
 
 
+
 Therefore 
+
+
 $$
 \boxed{
 \mathrm{Var}(\hat{\beta})=A^{-1}\mathrm{Var}\left(\mathrm{Cov}(\epsilon, \vec{x})\right) = \frac{\sigma^2}{n} (A^{-1})^{\circ 2}\mathrm{Var}(\vec{x})
@@ -255,7 +297,9 @@ $$
 $$
 
 
+
 And
+
 
 
 $$
