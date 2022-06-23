@@ -60,7 +60,7 @@ Hence the estimated $\beta_1$ for the observed data is
 $$
 \boxed{
 \hat{\beta_1} = \frac{\mathrm{Cov}(y,x)}{\mathrm{Var}(x)}
-\label{eqn:beta1_hat}
+\label{eqn:beta1}
 },
 $$
 
@@ -93,7 +93,7 @@ $$
 
 For given observed data $x$ and $y$, the variation of the estimated coefficients is due to the noise $\epsilon$.
 
-From Equation ($\ref{eqn:beta1_hat}$):
+From Equation ($\ref{eqn:beta1}$):
 
 
 
