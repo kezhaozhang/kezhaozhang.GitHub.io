@@ -372,7 +372,7 @@ $$
 
 
 
-where the following are used in derivation:
+where the following are used in the derivation:
 
 - $\mathrm{Cov}(\beta_0+\beta_k\alpha0, \tilde{x}_k)=0$: covariance of a constant and a random variable is zero.
 - $\mathrm{Cov}(\vec{z}, \tilde{x}_k)=0$: homoscedasticity in regression of Equation ($\ref{eqn:xk_regress}$).
