@@ -4,7 +4,7 @@ title: "Derivation of Linear Regression Coefficients and Their Variation with Mi
 
 
 
-This is a simple calculation of linear regression coefficients and their variances using covariance and variance with minimal need for matrix algebra.
+This is a simple calculation of linear regression coefficients and their variances using covariance and variance with minimal need for matrix algebra. This method can prove the regression anatomy theorem in a straightforward way. 
 
 
 
@@ -310,3 +310,93 @@ $$
 \end{align*}
 }
 $$
+
+
+## Regression Anatomy Theorem
+
+
+
+Suppose a linear relationship with $K$ predictors:
+
+
+$$
+y = \beta_0 +\beta_1 x_1 + \cdots+b_k x_k + \cdots + \beta_K x_K +\epsilon. \label{eqn:linear_expanded}
+$$
+
+
+The regression anatomy theorem (Angrist, 2009) says that
+
+
+$$
+\beta_k = \frac{\mathrm{Cov}(y, \tilde{x}_k)}{\mathrm{Var}(\tilde{x}_k)},
+$$
+
+
+where $\tilde{x}_k$ is the residual from a regression of $x_k$ on all the other covariates.
+
+To simplify the symbols, let the vector $\vec{z}$ be all the covariates except $x_k$.  Then Equation ($\ref{eqn:linear_expanded}$) becomes
+
+
+
+$$
+y=\beta_0 + \beta_k x_k + \gamma^T z +\epsilon.
+\label{eqn:linear_z}
+$$
+
+
+
+And the regression of $x_k$ on $\vec{z}$ is
+
+$$
+x_k = \alpha_0 + \alpha^T \vec{z} + \tilde{x}_k.
+\label{eqn:xk_regress}
+$$
+
+Plug Equation($\ref{eqn:xk_regress}$) into Equation($\ref{eqn:linear_z}$), we have
+
+
+
+$$
+\begin{align*}
+y &= \beta_0 + \beta_k (\alpha_0 +\alpha^T\vec{z}+\tilde{x}_k) +\gamma^T\vec{z}+\epsilon\\
+&= (\beta_0 + \beta_k\alpha0)+ (\beta_k \alpha^T+\gamma^T)\vec{z} +\beta_k \tilde{x}_k + \epsilon.
+\end{align*}
+$$
+
+Then
+
+
+$$
+\mathrm{Cov}(y, \tilde{x}_k) =\beta_k\mathrm{Cov}(\tilde{x}_k, \tilde{x}_k) = \beta_k\mathrm{Var}(\tilde{x}_k),
+$$
+
+
+
+where the following are used in derivation:
+
+- $\mathrm{Cov}(\beta_0+\beta_k\alpha0, \tilde{x}_k)=0$: covariance of a constant and a random variable is zero.
+- $\mathrm{Cov}(\vec{z}, \tilde{x}_k)=0$: homoscedasticity in regression of Equation ($\ref{eqn:xk_regress}$).
+- $\mathrm{Cov}(\tilde{x}_k, \epsilon)=0$:  random noises in Equation ($\ref{eqn:xk_regress}$) and Equation ($\ref{eqn:linear_expanded}$) are independent.
+- $\mathrm{Cov}(\tilde{x}_k, \tilde{x}_k)=\mathrm{Var}(\tilde{x}_k)$ : by definition.
+
+Therefore
+
+
+$$
+\boxed{
+\beta_k = \frac{\mathrm{Cov}(y, \tilde{x}_k)}{\mathrm{Var}(\tilde{x}_k)}
+}. \notag
+$$
+
+
+
+
+
+The regression f $x_k$ on all other covirates
+
+### References
+
+Angrist, Joshua D., and Jorn-Steffen Pischke. 2009. *Mostly Harmless Econometrics*. 1st ed. Princeton University Press.
+
+Scott Cunningham, 2021. *[Causal Inference: The Mixtape](https://mixtape.scunning.com/index.html)*
+
