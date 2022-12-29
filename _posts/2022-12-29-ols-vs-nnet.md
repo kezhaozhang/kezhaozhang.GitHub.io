@@ -180,7 +180,7 @@ XX = X + \mathcal{N}(0, noise). \notag
 $$
 
 
-Then we gress $y$ on $XX$.
+Then we regress $y$ on $XX$.
 
 ```python
 from sklearn.metrics import make_scorer, r2_score, mean_squared_error
