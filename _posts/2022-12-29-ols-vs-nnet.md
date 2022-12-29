@@ -224,10 +224,11 @@ As shown in figure 2, when the noise $<1$, the neural network (nnet) outperforms
    </center>
   <center>
   <figurecaption>
-    Figure 2. RMSE and R<sup>2</sup> for various amounts of noises. The dots are the mean of the 5-fold cross-validations, and the vertical bars represent a 95% interval. The neural network outperforms the linear model when noise is low (noise &lt 1) but becomes worse than the linear model when noise is high (&gt 1).
+    Figure 2. RMSE and R<sup>2</sup> for various amounts of noises. The dots are the mean of the 5-fold cross-validations, and the vertical bars represent a 95% interval. The neural network outperforms the linear model when noise is low (noise <1) but becomes worse than the linear model when noise is high (>1).
   </figurecaption>
   </center>
 </figure>
+
 
 
 
