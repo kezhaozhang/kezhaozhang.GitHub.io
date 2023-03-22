@@ -74,7 +74,9 @@ models = [LinearRegression(),
           LinearGAM(s(0)+s(1), max_iter=1000, tol=0.0000001)]
 [m.fit(np.stack((X,Y) , axis=1), Z) for m in models]
 fig, axes = plt.subplots(3,2, sharey=True, figsize=(6, 10))
-for description, m, ax in zip(['Linear Regression', 'GradientBoostingRegressor', 'GAM'], models, axes):
+for description, m, ax in zip(['Linear Regression', 
+                               'GradientBoostingRegressor', 
+                               'GAM'], models, axes):
     ale = ALE(m.predict, feature_names=['X','Y'], target_names=['Z'])
     ale_exp = ale.explain(np.stack((X,Y), axis=1), min_bin_points=10)
     #fig, ax = plt.subplots()
