@@ -79,7 +79,6 @@ for description, m, ax in zip(['Linear Regression',
                                'GAM'], models, axes):
     ale = ALE(m.predict, feature_names=['X','Y'], target_names=['Z'])
     ale_exp = ale.explain(np.stack((X,Y), axis=1), min_bin_points=10)
-    #fig, ax = plt.subplots()
     plot_ale(ale_exp, ax=ax, n_cols=2)
     ax[0].set_title(description);
 ```
