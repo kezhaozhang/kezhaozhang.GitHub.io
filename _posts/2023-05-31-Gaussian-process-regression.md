@@ -1,6 +1,7 @@
 ---
 title: "Gaussian Process Regression"
 date: 2023-05-31
+typora-root-url: ./..
 ---
 
 

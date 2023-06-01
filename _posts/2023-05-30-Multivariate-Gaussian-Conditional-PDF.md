@@ -1,5 +1,5 @@
 ---
-title: Conditional Distribution of Multivariate Gaussian Variables: A Simple Derivation
+title: "Conditional Distribution of Multivariate Gaussian Variables: A Simple Derivation"
 date: 2023-05-30
 ---
 
