@@ -1,7 +1,7 @@
 ---
 
 
-title:	Multivariate Gaussian Distribution As Linear Transformation of Independent Normally Distributed Random Variables
+title:"Multivariate Gaussian Distribution As Linear Transformation of Independent Normally Distributed Random Variables"
 ---
 
 

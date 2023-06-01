@@ -3,6 +3,10 @@ title: "Gaussian Process Regression"
 typora-root-url: ./..
 ---
 
+
+
+This article discusses Gaussian Process regression, a non-parametric approach for modeling the relationship between input variables and their corresponding outputs. It presents the conditional probability distribution of a multivariate Gaussian and the covariance matrix computation using a kernel function. The article also covers the optimization of kernel hyperparameters to maximize the likelihood function. An implementation of Gaussian Process regression in Python is provided. The article includes examples of noiseless and noisy observation cases and demonstrates the prediction of values with mean and confidence intervals. 
+
 ### Introduction
 
 Gaussian Process regression is a non-parametric approach that models the relationship between a set of input variables, denoted as $\mathbf{x}$, and their corresponding outputs, denoted as $\mathbf{y}$. It leverages two key results to estimate the distribution of $\mathbf{y}_2$ at a given $\mathbf{x}_2$, based on observations $\mathbf{y}_1$ at $\mathbf{x}_1$.
@@ -167,7 +171,7 @@ We use the same generated data as in the Sklearn Gaussian Process Regression [Us
 
 #### Noiseless Case
 
-In this scenario, the observations $\mathbf{y}*1$ are devoid of noise. The covariance matrix is given by $\Sigma_{ij} = K(\mathbf{x}_i, \mathbf{y}_j)$. We randomly select six data points from the function $y = x \sin x$ using the following code snippet. Figure 1 illustrates the data points and the corresponding function curve.
+In this scenario, the observations $\mathbf{y}_1$ are devoid of noise. The covariance matrix is given by $\Sigma_{ij} = K(\mathbf{x}_i, \mathbf{y}_j)$. We randomly select six data points from the function $y = x \sin x$ using the following code snippet. Figure 1 illustrates the data points and the corresponding function curve.
 
 ```python
 import numpy as np
