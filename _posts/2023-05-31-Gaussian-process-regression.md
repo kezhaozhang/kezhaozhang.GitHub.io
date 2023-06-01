@@ -53,7 +53,7 @@ $$
 
 ​	where $\mathbf{\mu}_1$ and $\mathbf{\mu}_2 = \mathbf{y}_2$ represent the means of $\mathbf{y}_1$ and $\mathbf{y}_2$, respectively.
 
-​	A derivation of Equation ($\ref{eqn:conditional_dist}$) can be found in an earlier post.
+​	A derivation of Equation ($\ref{eqn:conditional_dist}$) can be found in an [earlier post](https://kezhaozhang.github.io/2023/05/30/Multivariate-Gaussian-Conditional-PDF.html).
 
 2. **Covariance of $\mathbf{y}$ from $\mathbf{x}$**:
 
@@ -180,7 +180,7 @@ We use the same generated data as in the Sklearn Gaussian Process Regression [Us
 
 #### Noiseless Case
 
-In this scenario, the observations $\mathbf{y}_1$ are devoid of noise. The covariance matrix is given by $\Sigma_{ij} = K(\mathbf{x}_i, \mathbf{y}_j)$. We randomly select six data points from the function $y = x \sin x$ using the following code snippet. Figure 1 illustrates the data points and the corresponding function curve.
+In this scenario, the observations are devoid of noise. The covariance matrix is given by $\Sigma_{ij} = K(\mathbf{x}_i, \mathbf{y}_j)$. We randomly select six data points from the function $y = x \sin x$ using the following code snippet. Figure 1 illustrates the data points and the corresponding function curve.
 
 ```python
 import numpy as np
