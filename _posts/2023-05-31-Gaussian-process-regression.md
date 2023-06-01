@@ -1,6 +1,6 @@
 ---
 title: "Gaussian Process Regression"
-typora-root-url: ./..
+date: 2023-05-31
 ---
 
 
@@ -59,23 +59,31 @@ $$
    
    
    The covariance of $\mathbf{y}$ is determined solely by the predictor $\mathbf{x}$:
+   
+   
 
 
 $$
-\Sigma_{ij}=\mathrm{cov(\mathbf{y}_i, \mathbf{y}_j)} = K(\mathbf{x}_i, \mathbf{x}_j),
+\Sigma_{ij}=\mathrm{cov(\mathbf{y}_i, \mathbf{y}_j)} = K(\mathbf{x}_i, \mathbf{x}_j),\notag
 $$
 
-​	where $K$ denotes the kernel function. 
+​	
+
+where $K$ denotes the kernel function. 
 
 
 
 #### Kernel
 
 In this report, we adopt the squared exponential kernel:
+
+
 $$
 K(\mathbf{x}_i, \mathbf{x}_y) = \alpha \exp\left({-\frac{\mid \mathbf{x}_i-\mathbf{x}_j\mid^2}{2 l^2}}\right),
 \label{eqn:kernel}
 $$
+
+
 
 where $\alpha$ represents the amplitude and $l$ corresponds to the length scale.
 
@@ -295,9 +303,11 @@ plt.ylabel('$f(x)$')
 When noise is present in the observations, we have noisy values defined as $y_i^{\mathrm{noise}} = y_i + \epsilon_i$, and the covariance between the noise terms is given by $\mathrm{cov}(\epsilon_i, \epsilon_j) = \sigma^2\delta_{ij}$. The covariance matrix of the observations $\mathbf{y}_1$ is calculated as:
 
 
+
 $$
 \Sigma_{11} = K(\mathbf{x}_1, \mathbf{x}_1) + \sigma^2 \mathbf{I},
 $$
+
 
 
 where $\mathbf{I}$ is the identity matrix, and $\sigma$ represents the standard deviation of the noise. To perform Gaussian Process regression and likelihood calculation with noisy observations, we need to use this modified covariance matrix $\Sigma_{11}$. The code below shows how to calculate the negative log-likelihood with a squared exponential kernel and the modified covariance matrix.

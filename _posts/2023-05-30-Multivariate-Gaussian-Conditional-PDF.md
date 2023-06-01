@@ -1,5 +1,6 @@
 ---
 title: Conditional Distribution of Multivariate Gaussian Variables: A Simple Derivation
+date: 2023-05-30
 ---
 
 
@@ -227,5 +228,4 @@ we adjust the mean and obtain:
 $$
 \mathbf{y}_2 \mid \mathbf{y}_1 \sim \mathcal{N}(\mathbf{\mu}_2+\Sigma_{21}\Sigma_{11}^{-1} (\mathbf{y}_1-\mathbf{\mu}_1), \Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}).
 $$
-
 
