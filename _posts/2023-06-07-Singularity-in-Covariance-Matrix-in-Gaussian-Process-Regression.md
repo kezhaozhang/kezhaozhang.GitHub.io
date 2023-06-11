@@ -1,6 +1,6 @@
 ---
 title: "Singularity in Covariance Matrix in Gaussian Process Regression"
-date:2023-06-07
+date: 2023-06-07
 typora-root-url: ./..
 ---
 
