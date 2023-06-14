@@ -12,9 +12,12 @@ This post summarizes the proof demonstrating the positive definiteness of the mu
 According to (Wendland 2004), a continuous function $\Phi$: $\mathbb{R}^d \rightarrow \mathbb{C}$ is considered positive definite if  the quadratic form 
 
 
+
 $$
 \sum_{i=1}^N\sum_{j=1}^N\alpha_i \overline{\alpha_j}\Phi(\mathbf{x}_i - \mathbf{x}_k) \label{eqn:quadratic}
 $$
+
+
 is positive for all $N\in \mathbb{N}$, all sets of pairwise distinct centers $X = \{\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N\} \subseteq \mathbb{R}^d$, and all $\alpha \in \mathbb{C}^N$,
 
 
@@ -192,4 +195,4 @@ The covariance matrix is not positive definite because of the floating point com
 
 Wendland, H. (2004). Scattered Data Approximation. Cambridge University Press
 
-Fourier transform in $\mathbb{R }^n$ of $e^{-\mid \mid x\mid\mid}$. https://math.stackexchange.com/questions/2569910/fourier-transform-in-mathbbrn-of-e-x
+Fourier transform in $\mathbb{R }^n$ of $e^{-\mid \mid x\mid\mid}$. (https://math.stackexchange.com/questions/2569910/fourier-transform-in-mathbbrn-of-e-x)
