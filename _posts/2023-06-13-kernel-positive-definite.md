@@ -25,10 +25,14 @@ is positive for all $N\in \mathbb{N}$, all sets of pairwise distinct centers $X 
 The function $\Phi(\mathbf{x})$ can be expressed in terms of its Fourier transform:
 
 
+
 $$
 \Phi(\mathbf{x}) = (2\pi)^{-d/2}\int_{\mathbb{R}^d}\widehat{\Phi}(\boldsymbol{\omega})e^{i\mathbf{x}^T \mathbf{\omega}}d\boldsymbol{\omega}.\notag
 $$
+
+
 The Fourier  transform is defined as 
+
 
 
 $$
@@ -37,8 +41,8 @@ $$
 
 
 
+The quadratic form in Equation ($\ref{en:quadratic}$) becomes
 
-The quadratic form in Equation ($\ref{eqn:quadratic}$) becomes
 
 
 $$
@@ -91,6 +95,8 @@ $$
 
 Let $a = \vert \mathbf{x}\vert$, and the Fourier transform of the kernel is
 
+
+
 $$
 \begin{align*}
 \widehat{\Phi}(\boldsymbol{\omega})&= (2\pi)^{-d/2}\int_{\mathbb{R}^d} e^{-\vert \mathbf{x}\vert}e^{-i\mathbf{x}^T\boldsymbol{\omega}}d\boldsymbol{\omega}\\
@@ -100,6 +106,7 @@ $$
 & = \frac{2^{d/2}}{\sqrt{\pi}}\frac{\Gamma(\frac{d+1}{2})}{\left(1+\vert\boldsymbol{\omega}\vert^2\right)^{\frac{d+1}{2}}}.
 \end{align*}
 $$
+
 
 
 Clearly $\widehat{\Phi}(\boldsymbol{\omega})$ is positive for all $\boldsymbol{\omega}$.  Therefore the exponenpositivernel is postive definite.
