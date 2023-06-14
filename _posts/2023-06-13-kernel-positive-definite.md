@@ -41,7 +41,7 @@ $$
 
 
 
-The quadratic form in Equation ($\ref{en:quadratic}$) becomes
+The quadratic form in Equation ($1$) becomes
 
 
 
