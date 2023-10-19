@@ -131,7 +131,7 @@ The Radial Basis Function (RBF) kernel is defined as follows:
 $$
 \begin{align*}
 K(\mathbf{x}, \mathbf{y}) &= e^{-\gamma \mid \mathbf{x}-\mathbf{y}\mid^2}\\
- & = e^{-\gamma (\mathbf{x}\cdot\mathbf{x}+\mathbf{x}\cdot\mathbf{x})}e^{2\gamma\mathbf{x}\cdot\mathbf{y}}
+ & = e^{-\gamma (\mathbf{x}\cdot\mathbf{x}+\mathbf{y}\cdot\mathbf{y})}e^{2\gamma\mathbf{x}\cdot\mathbf{y}}
 \end{align*}
 $$
 
