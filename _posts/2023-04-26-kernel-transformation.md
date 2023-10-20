@@ -43,7 +43,7 @@ $$
 \phi(\mathbf{x})=\left( 
 	\begin{array}{c} 
 	\vdots \\
-	\sqrt{\sum_{\{i_m\}} \frac{d!}{\Pi_{m=1}^n i_m !}\Pi_{m=1}^n x_m ^{i_m}}\\
+	\sqrt{\sum_{\{i_m\}} \frac{d!}{\Pi_{m=1}^n i_m !}\Pi_{m=1}^n} x_m ^{i_m}\\
 	\vdots
 	\end{array}
 \right)
@@ -60,10 +60,10 @@ For instance, when $n=2$ and $d=3$, {$i_m$}= {3,0}, {2,1}, {1,2}, {0,3}.
 $$
 \phi(\mathbf{x})=\left(
 \begin{array}{c}
-\sqrt{x_1^3}\\
-\sqrt{3x_1^2 x_2}\\
-\sqrt{3 x_1 x_2^2}\\
-\sqrt{x_2^3}
+x_1^3\\
+\sqrt{3}x_1^2 x_2\\
+\sqrt{3} x_1 x_2^2\\
+x_2^3
 \end{array}
 \right).
 $$
