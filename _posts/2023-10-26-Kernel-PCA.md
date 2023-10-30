@@ -19,7 +19,7 @@ The crucial relationship between the mapped vectors in the feature space is repr
 
 $$
 \langle \phi(\mathbf{x}_i), \phi(\mathbf{x}_j)\rangle = f(\mathbf{x}_i, \mathbf{x}_j)
-\label{eqn:dot_product}.
+\label{eqn_dot_prod}.
 $$
 
 
@@ -28,12 +28,12 @@ We can assemble these mapped vectors into a matrix $\psi$, where each row corres
 
 $$
 \psi = \left(
-\begin{array}{ccc}
-\rule[.5ex]{5.5ex}{0.25pt} &\phi(\mathbf{x}_1) & \rule[.5ex]{5.5ex}{0.25pt}\\
-& \vdots & \\
-\rule[.5ex]{5.5ex}{0.25pt} &\phi(\mathbf{x}_k) & \rule[.5ex]{5.5ex}{0.25pt}\\
-& \vdots & \\
-\rule[.5ex]{5.5ex}{0.25pt} &\phi(\mathbf{x}_N) & \rule[.5ex]{5.5ex}{0.25pt}
+\begin{array}{c}
+\phi(\mathbf{x}_1) \\
+\vdots \\
+\phi(\mathbf{x}_k)\\
+ \vdots  \\
+\phi(\mathbf{x}_N) 
 \end{array}
 \right). \notag
 $$
@@ -43,7 +43,7 @@ $$
 
 The mean of this matrix $\psi$ is calculated as:
 $$
-\bar{\psi} = A \psi,
+\bar{\psi} = A \psi, \notag
 $$
 
 
@@ -54,8 +54,7 @@ $$
 \begin{array}{ccl}
 C &=& \frac{1}{N}(\psi -\bar{\psi})^T (\psi-\bar{\psi})\\
  &=& \frac{1}{N} \psi^T (I - A) (I - A)\psi
- \end{array}
-\label{eqn:cov}
+ \end{array} \notag
 $$
 
 
@@ -67,7 +66,7 @@ Principal Component Analysis in the feature space seeks the eigenvector $V$ of t
 
 
 $$
-C V = \lambda V. \label{eqn:eig_eqn}
+C V = \lambda V. \label{eqn_eig_eqn}
 $$
 
 
@@ -75,18 +74,18 @@ By expressing $V$ as a linear combination of the centered mapped data, we obtain
 
 
 $$
-V = (\psi - \bar{\psi})^T \alpha=\psi^T(I-A)\alpha, \label{eqn:eigv}
+V = (\psi - \bar{\psi})^T \alpha=\psi^T(I-A)\alpha, \label{eqn_eigv}
 $$
 where $\alpha$ is a vector of size $N$.
 
 
 
-Now, if we plug Equation ($\ref{eqn:eigv}$) into the eigenvector equation ($\ref{eqn:eig_eqn}$), we have
+Now, if we plug Equation ($\ref{eqn_eigv}$) into the eigenvector equation ($\ref{eqn_eig_eqn}$), we have
 
 
 $$
 \frac{1}{N} \psi^T(I-A)(I-A)\psi\psi^T (I-A)\alpha = \lambda \psi^T(I-A)\alpha. 
-\label{eqn:eig_v_expanded}
+\notag
 $$
 
 
@@ -95,7 +94,7 @@ By multiplying both sides by $(I-A)\psi$, we arrive at:
 
 $$
 \widetilde{K}\widetilde{K} \alpha =  \widetilde{K} \lambda N \alpha,
-\label{eqn:k-tilde-eig}
+\label{eqn_k_tilde_eig}
 $$
 where
 
@@ -106,7 +105,7 @@ $$
 & = & (I-A) \psi \psi^T (I-A) \\
 &=& (I-A) K (I-A) \\
 \end{array}.
-\label{eqn:k_tilde}
+\notag
 $$
 
 
@@ -114,18 +113,23 @@ And
 
 
 $$
-K = \psi \psi^T.
+K = \psi \psi^T. \notag
 $$
 Here $K$ is the the dot product of the mapped vectors in the feature space, as defined by $K_{ij} = f(\phi(\mathbf{x})_i, \phi(\mathbf{x}_j)$. We can calculate $K$ in the original space using the kernel function. 
 
 
 
-From Equation ($\ref{eqn:k-tilde-eig}$), $\alpha$ becomes the solution for 
+From Equation ($\ref{eqn_k_tilde_eig}$), $\alpha$ becomes the solution for 
+
+
 $$
 \widetilde{K} \alpha = \lambda' \alpha
-\label{eqn:k_tilde_eig}
+\label{eqn_eig}
 $$
+
+
 where $\lambda' = N\lambda$. To normalize $V$  for the $k$-th eigenvector $V_k$, we require:
+
 
 
 $$
@@ -133,11 +137,13 @@ V_k^T V_k =\alpha_k^T (I-A)\psi \psi^T (I-A)\alpha_k=\alpha_k^T \widetilde{K}\al
 $$
 
 
-As a result of Equation ($\ref{eqn:k_tilde_eig}$), we scale $\alpha$ as $\alpha' = \alpha/\sqrt{\lambda'}$. The $k$-th principal component corresponding to $\alpha_k$ for centered mapped data $\psi - \bar{\psi}$  is given by:
+
+As a result of Equation ($\ref{eqn_eig}$), we scale $\alpha$ as $\alpha' = \alpha/\sqrt{\lambda'}$. The $k$-th principal component corresponding to $\alpha_k$ for centered mapped data $\psi - \bar{\psi}$  is given by:
+
 
 
 $$
-\text{PC}_k = (\psi -\bar{\psi}) V_k =(I-A)\psi \psi^T (I -A)\alpha'_k = \widetilde{K}\alpha'_k=\sqrt{\lambda'_k}\alpha_k.
+\text{PC}_k = (\psi -\bar{\psi}) V_k =(I-A)\psi \psi^T (I -A)\alpha'_k = \widetilde{K}\alpha'_k=\sqrt{\lambda'_k}\alpha_k. \notag
 $$
 
 
