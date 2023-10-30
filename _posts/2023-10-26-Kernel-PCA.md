@@ -46,8 +46,8 @@ $$
 \bar{\psi} = A \psi, \notag
 $$
 
-
 where $A$ is a square matrix of size $N$, with all its elements set to $1/N$. The covariance matrix in the feature space is derived as follows:
+
 
 
 $$
@@ -58,6 +58,7 @@ C &=& \frac{1}{N}(\psi -\bar{\psi})^T (\psi-\bar{\psi})\\
 $$
 
 
+
 where $I$ is an identity matrix of size $N$.
 
 
@@ -65,22 +66,28 @@ where $I$ is an identity matrix of size $N$.
 Principal Component Analysis in the feature space seeks the eigenvector $V$ of the covariance matrix $C$:
 
 
+
 $$
 C V = \lambda V. \label{eqn_eig_eqn}
 $$
 
 
+
 By expressing $V$ as a linear combination of the centered mapped data, we obtain:
+
 
 
 $$
 V = (\psi - \bar{\psi})^T \alpha=\psi^T(I-A)\alpha, \label{eqn_eigv}
 $$
+
+
 where $\alpha$ is a vector of size $N$.
 
 
 
 Now, if we plug Equation ($\ref{eqn_eigv}$) into the eigenvector equation ($\ref{eqn_eig_eqn}$), we have
+
 
 
 $$
@@ -89,14 +96,19 @@ $$
 $$
 
 
+
 By multiplying both sides by $(I-A)\psi$, we arrive at:
+
 
 
 $$
 \widetilde{K}\widetilde{K} \alpha =  \widetilde{K} \lambda N \alpha,
 \label{eqn_k_tilde_eig}
 $$
+
+
 where
+
 
 
 $$
@@ -108,13 +120,15 @@ $$
 \notag
 $$
 
-
 And
+
 
 
 $$
 K = \psi \psi^T. \notag
 $$
+
+
 Here $K$ is the the dot product of the mapped vectors in the feature space, as defined by $K_{ij} = f(\phi(\mathbf{x})_i, \phi(\mathbf{x}_j)$. We can calculate $K$ in the original space using the kernel function. 
 
 
@@ -222,7 +236,7 @@ kpc = kpc[:, ::-1] #sort in descending order of eigenvalue
 
 #### Explicit Mapping in Feature Space
 
-Alternatively, we can perform PCA on the mapped vectors in the feature space. The mapping to the feature space by a polynomial kernel is explicitly constructed, as described in a [previous blog post](<https://kezhaozhang.github.io/2023/04/26/kernel-transformation.html>)). In this example, the data in the original space is two-dimensional and the polynomial kernel has a degree of 4. For a data point $\mathbf{x}=(x_1, x_2)$,  the mapping  is
+Alternatively, we can perform PCA on the mapped vectors in the feature space. The mapping to the feature space by a polynomial kernel is explicitly constructed, as described in a [previous blog post](<https://kezhaozhang.github.io/2023/04/26/kernel-transformation.html>). In this example, the data in the original space is two-dimensional and the polynomial kernel has a degree of 4. For a data point $\mathbf{x}=(x_1, x_2)$,  the mapping  is
 
 
 $$
