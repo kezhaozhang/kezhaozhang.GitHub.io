@@ -1,6 +1,6 @@
 ---
 title: "Understanding Kernel Principal Component Analysis (Kernel PCA)"
-date:2023-10-26
+date: 2023-10-26
 typora-root-url: ./..
 ---
 
