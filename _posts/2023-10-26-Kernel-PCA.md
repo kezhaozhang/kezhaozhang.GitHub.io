@@ -129,7 +129,7 @@ K = \psi \psi^T. \notag
 $$
 
 
-Here $K$ is the the dot product of the mapped vectors in the feature space, as defined by $K_{ij} = f(\phi(\mathbf{x})_i, \phi(\mathbf{x}_j)$. We can calculate $K$ in the original space using the kernel function. 
+Here $K$ is the the dot product of the mapped vectors in the feature space, as defined by $K_{ij} = f(\phi(\mathbf{x})_i, \phi(\mathbf{x}_j))$. We can calculate $K$ in the original space using the kernel function. 
 
 
 
@@ -195,9 +195,12 @@ plt.axis('equal')
 #### Kernel 
 
 We use a polynomial kernel of degree 4:
+
+
 $$
 f(\mathbf{x}, \mathbf{y}) = (\mathbf{x}\cdot\mathbf{y})^4. \notag
 $$
+
 
 
 #### Kernel PCA without Explicit Mapping
