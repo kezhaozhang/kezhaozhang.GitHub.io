@@ -239,7 +239,8 @@ kpc = kpc[:, ::-1] #sort in descending order of eigenvalue
 
 #### Explicit Mapping in Feature Space
 
-Alternatively, we can perform PCA on the mapped vectors in the feature space. The mapping to the feature space by a polynomial kernel is explicitly constructed, as described in a [previous blog post](<https://kezhaozhang.github.io/2023/04/26/kernel-transformation.html>). In this example, the data in the original space is two-dimensional and the polynomial kernel has a degree of 4. For a data point $\mathbf{x}=(x_1, x_2)$,  the mapping  is
+Alternatively, we can perform PCA on the mapped vectors in the feature space. A polynomial kernel's map to the feature space is explicitly constructed, as described in a [previous blog post](<https://kezhaozhang.github.io/2023/04/26/kernel-transformation.html>). In this example, the data in the original space is two-dimensional, and the polynomial kernel has a degree of 4. For a data point $\mathbf{x}=(x_1, x_2)$,  the mapping  is
+
 
 
 $$
@@ -253,7 +254,9 @@ x_2^4
 \end{array}
 \right). \notag
 $$
-The following code converts data into feature space and calculate the PCA.
+
+
+The following code converts data into feature space and calculates the PCA.
 
 ```python
 from scipy.special import binom
