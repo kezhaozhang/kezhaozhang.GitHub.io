@@ -43,7 +43,7 @@ The mathematical definition of independence is that two random variables, $\math
 
 $$
 C_{xy} = \mathbf{E}_{x,y}[(f(\mathbf{x})-\overline{f(\mathbf{x}}))\otimes(g(\mathbf{y})-\overline{g(\mathbf{y}}))],
-\label{eqn:cross-covariance}
+\notag
 $$
 
 
@@ -182,7 +182,7 @@ Note that $HK_xH$ is the centered kernel $K_x$ and $HK_yH$ is the centered kerne
 
 #### Statistical Significance
 
-To determine whether the $\mathrm{HSIC}$ estimated using the formula above is statistically different from 0, we can employ bootstrap sampling. This involves randomly sampling the observations $\left\{x_1, ..., x_N\right\}$ and $\left\{y_1, ..., y_N\right\}$ with replacement for each pair of sampled data and calculating the $\mathrm{HSIC}$ for each permuted sample. As the randomly sampled $x$ and $y$ are independent, the distribution of the bootstrapped $\mathrm{HSIC}$ represents the distribution when the random variables are independent. The $\mathrm{HSIC}$ value of the original observation is then compared to this distribution. If it is significantly larger than the distribution, it suggests that $x$ and $y$ are dependent. A $p-$value can be defined as the proportion of the permuted samples whose $\mathrm{HSIC}$ is greater than that of the original data.
+To determine whether the $\mathrm{HSIC}$ estimated using the formula above is statistically different from 0, we can employ bootstrap sampling. This involves randomly sampling the observations $\{x_1, ..., x_N\}$ and $\{y_1, ..., y_N\}$ with replacement for each pair of sampled data and calculating the $\mathrm{HSIC}$ for each permuted sample. As the randomly sampled $x$ and $y$ are independent, the distribution of the bootstrapped $\mathrm{HSIC}$ represents the distribution when the random variables are independent. The $\mathrm{HSIC}$ value of the original observation is then compared to this distribution. If it is significantly larger than the distribution, it suggests that $x$ and $y$ are dependent. A $p-$value can be defined as the proportion of the permuted samples whose $\mathrm{HSIC}$ is greater than that of the original data.
 
 
 
@@ -212,6 +212,7 @@ def hsic(Kx, Ky):
         Ky: kernel of variable y
     Output:
         HSIC
+Note: Factor of 1/N**2 is omitted from the retiurned HSIC
 """
     N = Kx.shape[0]
     H = np.identity(N) - 1/N*np.ones((N,N))
@@ -295,10 +296,11 @@ As Figure 4 illustrates using dependent but not linearly correlated data, the co
   <img src="/assets/images/hsic_x^d_vs_y^d.svg" width="850">
    </center>
   <center>
-    <figcaption> Figure 4. The correlation between polynomial mapping of <i>x</i> and <i>y</i> for various degrees.
+    <figcaption> Figure 4. The correlation between polynomial mapping of <i>x</i> and <i>y</i> for various degrees. <i>r</i> is the Pearson correlation coefficient. 
     </figcaption>
   </center>
 </figure>
+
 
 
 
