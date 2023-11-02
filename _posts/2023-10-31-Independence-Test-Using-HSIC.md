@@ -174,7 +174,7 @@ $$
 
 
 
-where $K_x = \Psi \Psi^T$ and $K_y =\Phi \Phi^T$. $K_x$ and $K_y$ are the Gram matrices of the mapped features for $\mathbf{x}$ and $\mathbf{y}$, respectively. In addition, in the second step in the equation above, the following property of matrix trace is used: $\mathrm{Trace}(P Q)=\mathrm{Trace}(Q P)$, where $P = \Phi^T H H \Psi \Psi^TH$ and $Q=H\Phi$. Again, in the last step, the same trace property is used. 
+where $K_x = \Psi \Psi^T$ and $K_y =\Phi \Phi^T$. $K_x$ and $K_y$ are the Gram matrices of the mapped features for $\mathbf{x}$ and $\mathbf{y}$, respectively. In addition, in the second step in the equation above, the following property of matrix trace is used: $\mathrm{tr}(P Q)=\mathrm{tr}(Q P)$, where $P = \Phi^T H H \Psi \Psi^TH$ and $Q=H\Phi$. Again, in the last step, the same trace property is used. 
 
 Note that $HK_xH$ is the centered kernel $K_x$ and $HK_yH$ is the centered kernel $K_y$.
 
@@ -182,7 +182,7 @@ Note that $HK_xH$ is the centered kernel $K_x$ and $HK_yH$ is the centered kerne
 
 #### Statistical Significance
 
-To determine whether the $\mathrm{HSIC}$ estimated using the formula above is statistically different from 0, we can employ bootstrap sampling. This involves randomly sampling the observations $\{x_1, ..., x_N\}$ and $\{y_1, ..., y_N\}$ with replacement for each pair of sampled data and calculating the $\mathrm{HSIC}$ for each permuted sample. As the randomly sampled $x$ and $y$ are independent, the distribution of the bootstrapped $\mathrm{HSIC}$ represents the distribution when the random variables are independent. The $\mathrm{HSIC}$ value of the original observation is then compared to this distribution. If it is significantly larger than the distribution, it suggests that $x$ and $y$ are dependent. A $p-$value can be defined as the proportion of the permuted samples whose $\mathrm{HSIC}$ is greater than that of the original data.
+To determine whether the $\mathrm{HSIC}$ estimated using the formula above is statistically different from 0, we can employ bootstrap sampling. This involves randomly sampling the observations $\left\{x_1, ..., x_N\right\}$ and $\left\{y_1, ..., y_N\right\}$ with replacement for each pair of sampled data and calculating the $\mathrm{HSIC}$ for each permuted sample. As the randomly sampled $x$ and $y$ are independent, the distribution of the bootstrapped $\mathrm{HSIC}$ represents the distribution when the random variables are independent. The $\mathrm{HSIC}$ value of the original observation is then compared to this distribution. If it is significantly larger than the distribution, it suggests that $x$ and $y$ are dependent. A $p-$value can be defined as the proportion of the permuted samples whose $\mathrm{HSIC}$ is greater than that of the original data.
 
 
 
