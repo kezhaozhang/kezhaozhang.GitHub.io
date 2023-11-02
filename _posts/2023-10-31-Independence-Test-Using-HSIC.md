@@ -4,6 +4,10 @@ date: 2023-10-31
 typora-root-url: ./..
 ---
 
+In this article, we will derive the HSIC formula in a clear and straightforward manner. We will also explore how to estimate the statistical significance using bootstrap sampling and gain an intuitive understanding of why mapping data into a feature space is crucial for independence testing.
+
+
+
 ### Introduction
 
 When dealing with random variables that are dependent on each other, it's not uncommon for them to exhibit no linear correlation. As illustrated in Figure 1, the linear correlation metric, such as the Pearson correlation coefficient, might fail to detect this dependence.
@@ -22,9 +26,8 @@ Random variables that are dependent on each other may have no linear correlation
   </center>
 </figure>
 
-To address this issue, Gretton et al. introduced the Hilbert-Schmidt Independence Criterion (HSIC) as a means to assess statistical dependence. HSIC involves mapping the data to a feature space using kernels, constructing a cross-covariance matrix, and ultimately quantifying the degree of dependence based on the Hilbert-Schmidt norm of this matrix.
 
-In this article, we will derive the HSIC formula in a clear and straightforward manner. We will also explore how to estimate the statistical significance using bootstrap sampling and gain an intuitive understanding of why mapping data into a feature space is crucial for independence testing.
+To address this issue, Gretton et al. introduced the Hilbert-Schmidt Independence Criterion (HSIC) as a means to assess statistical dependence. HSIC involves mapping the data to a feature space using kernels, constructing a cross-covariance matrix, and ultimately quantifying the degree of dependence based on the Hilbert-Schmidt norm of this matrix.
 
 
 
@@ -72,7 +75,7 @@ $$
 
 
 
-Here, $C_{ij}$ is the element at the $i$-th row and $j$-th column of $C_{xy}$. $x$ and $y$ are considered independent when $\mathrm{HSIC} = |C_{xy}|_{\mathrm{HS}}^2 = 0$.
+Here, $C_{ij}$ is the element at the $i$-th row and $j$-th column of $C_{xy}$.  $x$ and $y$ are considered independent when $\mathrm{HSIC} = \vert C_{xy}\vert_{\mathrm{HS}}^2 = 0$.
 
 
 
