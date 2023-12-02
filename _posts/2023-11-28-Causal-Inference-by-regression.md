@@ -130,7 +130,7 @@ for(s in c(0, 0.1, 0.25, 0.5, 0.75, 1)){
 
 
 
-Figure 2 illustrates the significant influence of noise on causal inference. The distribution of $\Delta = \rm{pvalue}_{y\sim x} - \rm{pvalue}_{x\sim y}$ is depicted. Here, $\rm{pvalue}_{y\sim x}$ represents the p-value from the Hibert-Schmidt Independence Criterion (HSIC) test between <i>x</i> and the residual of the regression of $y$ on $x$, while $\rm{pvalue}_{x\sim y}$ is the p-value from the HSIC test between $y$ and the residual of the regression of $x$ on $y$.
+Figure 2 illustrates the significant influence of noise on causal inference. The distribution of $\Delta = pv_{y\sim x} - pv_{x\sim y}$ is depicted. Here, $pv_{y\sim x}$ represents the p-value from the Hibert-Schmidt Independence Criterion (HSIC) test between <i>x</i> and the residual of the regression of $y$ on $x$, while $pv_{x\sim y}$ is the p-value from the HSIC test between $y$ and the residual of the regression of $x$ on $y$.
 
 For small $\sigma_x$, $\Delta>0$, suggesting a causal direction of $x \rightarrow y$. Conversely, when $\sigma_x$ is large, $\Delta < 0$, indicating a causal direction of $y\rightarrow x$. Notably, at $\sigma_x = 0.25$, the distribution of $\Delta$ centers around 0, signifying an inability to infer a causal direction clearly.
 
