@@ -49,7 +49,13 @@ $$
 
 
 
-where $\left(\begin{array}{c} n\\m\end{array}\right)=\frac{n!}{m!(n-m)!}$ is the binomial coefficient, which is the number of ways to choose an unordered subset of $m$ elements from  $n$ elements.
+where 
+$$
+\left(\begin{array}{c} n\\m\end{array}\right)=\frac{n!}{m!(n-m)!} \notag
+$$
+
+
+is the binomial coefficient, which is the number of ways to choose an unordered subset of $m$ elements from  $n$ elements.
 
 
 
@@ -110,7 +116,7 @@ When the counts are sufficiently large, the sum of the squared difference betwee
 $$
 \begin{align}\notag
 \chi^2 & = \frac{(n_1 p_1 - n_1\hat{p})^2}{n_1\hat{p}} +\frac{(n_2 p_2 - n_2\hat{p})^2}{n_2 \hat{p}}\\ \notag
-& +\frac{\left[n_1(1-p_1)-n_1(1-\hat{p})\right]^2}{n_1(1-\hat{p})} +\frac{\left[n_2 (1-p_2)-n_2(1-\hat{p})\right]^2}{n_2\hat{p}}\\ \label{eqn:chi-squared}.
+& +\frac{\left[n_1(1-p_1)-n_1(1-\hat{p})\right]^2}{n_1(1-\hat{p})} +\frac{\left[n_2 (1-p_2)-n_2(1-\hat{p})\right]^2}{n_2\hat{p}}.\label{eqn:chi-squared}
 \end{align}
 $$
 
