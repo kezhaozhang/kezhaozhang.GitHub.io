@@ -55,6 +55,7 @@ $$
 $$
 
 
+
 is the binomial coefficient, which is the number of ways to choose an unordered subset of $m$ elements from  $n$ elements.
 
 
@@ -114,9 +115,9 @@ When the counts are sufficiently large, the sum of the squared difference betwee
 
 
 $$
-\begin{align}\notag
+\begin{align}\label{eqn:chi-squared}
 \chi^2 & = \frac{(n_1 p_1 - n_1\hat{p})^2}{n_1\hat{p}} +\frac{(n_2 p_2 - n_2\hat{p})^2}{n_2 \hat{p}}\\ \notag
-& +\frac{\left[n_1(1-p_1)-n_1(1-\hat{p})\right]^2}{n_1(1-\hat{p})} +\frac{\left[n_2 (1-p_2)-n_2(1-\hat{p})\right]^2}{n_2\hat{p}}.\label{eqn:chi-squared}
+& +\frac{\left[n_1(1-p_1)-n_1(1-\hat{p})\right]^2}{n_1(1-\hat{p})} +\frac{\left[n_2 (1-p_2)-n_2(1-\hat{p})\right]^2}{n_2\hat{p}}.
 \end{align}
 $$
 
@@ -289,8 +290,9 @@ The distribution of the difference between the failure rates, $p_1 - p_2$, is sh
 </figure>
 
 
-
 The MCMC method gives us more insights compared to Fisher's exact test or the Chi-squared test. It helps us understand the data better, especially when we change things like sample size.
+
+
 
 For instance, if we reduce Group 2's sample size drastically, like by 7 times, we see in Figure 4 that the uncertainty in Group 2's failure rate (denoted as $p_2$) shoots up because of the smaller sample size.
 
