@@ -41,77 +41,15 @@ The CelebFaces Attributes (CelebA) Dataset provides $202599$ celebrity images, e
 
 The deep network VAE is implemented in Wolfram Language. The network structure is adopted from *Generative Deep Learning* by David Foster.
 
-```python
-imgh = 32; (*image size after resizing*)
-imgw = 32; (*image size after resizing*)
-h = 4; (* conv layer kernel size*)
-w = 4; (* conv layer kernel size*)
-nlatent = 200; (* dimension of the latent space *)
-beta = 2000; (* weight of the mean-squared-error *)
-
-conv = NetChain[{ConvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->"Same"],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    ConvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->"Same"],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    ConvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->"Same"],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    ConvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->"Same"],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    FlattenLayer[]
-},
-          "Input"->NetEncoder[{"Image", {imgw, imgh}}]
-];
-
-encoder = NetGraph[<|"conv"->conv, 
-                    "mean"->LinearLayer[nlatent], 
-                    "logvar"->LinearLayer[nlatent]
-                    |>, 
-                   {"conv"->{"mean", "logvar"}, 
-                    "mean"->NetPort["Mean"], 
-                    "logvar"->NetPort["LogVar"]}
-];
-
-
-decoder = NetChain[{LinearLayer[512],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    ReshapeLayer[{128, 2, 2}],
-                    DeconvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->1],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    DeconvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->1],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    DeconvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->1],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    DeconvolutionLayer[128, {h, w}, "Stride"->2, PaddingSize->1],
-                    BatchNormalizationLayer[],
-                    ParametricRampLayer[],
-                    DeconvolutionLayer[3, {3,3}, "Stride"->1, PaddingSize->1],
-                    ElementwiseLayer["Sigmoid"]}
-];
-
-
-vae = NetGraph[<|"encoder"->encoder,
-                 "decoder"->decoder,
-                 "random"->RandomArrayLayer[NormalDistribution[], "Output"->nlatent],
-                 "sampling"->ThreadingLayer[#1+Exp[#2*0.5]*#3&],
-                 "MS"->MeanSquaredLossLayer[],
-                 "KL"->{ThreadingLayer[(#1^2+Exp[#2]-#2-1)*0.5&], SummationLayer[]},
-                 "sum"->ThreadingLayer[beta*#1+#2&]|>,
-                 {{NetPort["encoder", "Mean"], NetPort["encoder","LogVar"], "random"}->"sampling"->"decoder"->NetPort["Output"],
-                  {"decoder", NetPort["Input"]}->"MS",
-                  {NetPort["encoder", "Mean"], NetPort["encoder", "LogVar"]}->"KL",
-                  {"MS", "KL"}->"sum"->NetPort["Loss"]}
-];
-```
-
-
+<figure>
+  <center>
+  <img src="/assets/images/vae_code.png" width="1200">
+   </center>
+  <center>
+    <figcaption> 
+    </figcaption>
+  </center>
+</figure>
 
 In this implementation, we use the VAE structure, which consists of an encoder and a decoder (Figure 2). The encoder has four convolutional layers; its structure is shown in Figures 3 and 4. The output of the encoder is the mean and logarithm of the multivariate Gaussian distribution with a dimension of $200$. We assume that the covariance matrix of the Gaussian distribution is diagonal, which means the logarithm of the variance is a one-dimensional array. On the other hand, the decoder has five transposed convolutional layers (or Deconvolution layers in Wolfram Language), as shown in Figure 5. The decoder takes random samples from the multivariate Gaussian distribution and produces the decoded images as output.
 
