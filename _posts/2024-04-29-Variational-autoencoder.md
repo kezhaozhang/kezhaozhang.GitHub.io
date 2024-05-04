@@ -199,7 +199,7 @@ To understand how the VAE processes images, we examine the outputs of each convo
 
 
 
-##### Convulaitonal Layers in the Encoder
+#### Convulaitonal Layers in the Encoder
 
 Figures 10-13 shows the encoder progressively extracts higher-level features from the input image during the encoding phase.
 
@@ -251,7 +251,7 @@ Figures 10-13 shows the encoder progressively extracts higher-level features fro
 
 
 
-##### Convolution Layers in the Decoder
+#### Convolution Layers in the Decoder
 
 Figures 14-18 show the decoder gradually builds up the image from the latent representation, reintroducing more details layer by layer.
 
