@@ -39,9 +39,9 @@ The CelebFaces Attributes (CelebA) Dataset provides $202599$ celebrity images, e
 
 ### Wolfram Language Implementation
 
-The deep network VAE is implemented in Wolfram Language. The structure of the network is adopted from Generative Deep Learning* by David Foster.
+The deep network VAE is implemented in Wolfram Language. The network structure is adopted from *Generative Deep Learning* by David Foster.
 
-```mathematica
+```
 imgh = 32; (*image size after resizing*)
 imgw = 32; (*image size after resizing*)
 h = 4; (* conv layer kernel size*)
