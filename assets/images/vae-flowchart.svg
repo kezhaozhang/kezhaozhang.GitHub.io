@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.3712683in"
+   height="2.9908962in"
+   viewBox="0 0 212.63021 75.968764"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker6-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path6-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker9-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9-8" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-50.109699,-66.736397)">
+    <path
+       id="rect1"
+       style="fill:#aaccff;stroke-width:0.215181"
+       d="m 224.2399,81.316264 38.5,-14.57986 -0.4074,75.968746 -38.0926,-11.8941 z" />
+    <path
+       id="rect1-9"
+       style="fill:#aaccff;stroke-width:0.215181"
+       d="m 88.6097,81.316256 -38.5,-14.579861 0.4074,75.968765 38.0926,-11.8941 z" />
+    <rect
+       style="fill:#ffeeaa;stroke-width:0.264583"
+       id="rect2"
+       width="23.031248"
+       height="15.468749"
+       x="112.77313"
+       y="79.967857" />
+    <rect
+       style="fill:#dbdee3;stroke-width:0.329297"
+       id="rect2-0"
+       width="35.675552"
+       height="15.468749"
+       x="155.49942"
+       y="101.06886" />
+    <text
+       style="font-size:10.5833px;line-height:1.25;font-family:Symbol;-inkscape-font-specification:Symbol;stroke-width:0.264583"
+       x="120.94788"
+       y="89.112236"
+       id="text4">μ</text>
+    <rect
+       style="fill:#ffeeaa;stroke-width:0.264583"
+       id="rect2-4"
+       width="23.031248"
+       height="15.468749"
+       x="112.77313"
+       y="119.1852" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:Symbol;-inkscape-font-specification:Symbol;stroke-width:0.264583"
+       x="121.37421"
+       y="130.95886"
+       id="text5"><tspan
+         id="tspan4"
+         style="stroke-width:0.264583"
+         x="121.37421"
+         y="130.95886">Σ</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.795983;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6)"
+       d="M 88.812795,106.01991 110.40966,88.678032"
+       id="path5" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.795983;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6-5)"
+       d="m 88.797047,106.0873 21.596863,17.34187"
+       id="path5-9" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:Symbol;-inkscape-font-specification:Symbol;stroke-width:0.264583"
+       x="159.34023"
+       y="110.33661"
+       id="text6"><tspan
+         id="tspan6"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="159.34023"
+         y="110.33661">Sample</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.768157;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 191.16983,108.98186 h 29.99872"
+       id="path7" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.715343;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9)"
+       d="m 135.52515,87.042945 17.69322,18.293875"
+       id="path8" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.715343;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9-8)"
+       d="m 135.74233,127.4213 17.69322,-18.29388"
+       id="path8-1" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:Symbol;-inkscape-font-specification:Symbol;stroke-width:0.264583"
+       x="53.669987"
+       y="111.12415"
+       id="text9"><tspan
+         id="tspan9"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="53.669987"
+         y="111.12415">Encoder</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:Symbol;-inkscape-font-specification:Symbol;stroke-width:0.264583"
+       x="226.56505"
+       y="111.12415"
+       id="text9-6"><tspan
+         id="tspan9-4"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="226.56505"
+         y="111.12415">Decoder</tspan></text>
+  </g>
+</svg>
