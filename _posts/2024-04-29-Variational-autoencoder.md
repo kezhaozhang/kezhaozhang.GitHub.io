@@ -41,7 +41,7 @@ The CelebFaces Attributes (CelebA) Dataset provides $202599$ celebrity images, e
 
 The deep network VAE is implemented in Wolfram Language. The network structure is adopted from *Generative Deep Learning* by David Foster.
 
-```
+```python
 imgh = 32; (*image size after resizing*)
 imgw = 32; (*image size after resizing*)
 h = 4; (* conv layer kernel size*)
@@ -104,7 +104,7 @@ vae = NetGraph[<|"encoder"->encoder,
                  "MS"->MeanSquaredLossLayer[],
                  "KL"->{ThreadingLayer[(#1^2+Exp[#2]-#2-1)*0.5&], SummationLayer[]},
                  "sum"->ThreadingLayer[beta*#1+#2&]|>,
-                 {{NetPort["encoder", "Mean"], NetPort["encoder", "LogVar"], "random"}->"sampling"->"decoder"->NetPort["Output"],
+                 {{NetPort["encoder", "Mean"], NetPort["encoder","LogVar"], "random"}->"sampling"->"decoder"->NetPort["Output"],
                   {"decoder", NetPort["Input"]}->"MS",
                   {NetPort["encoder", "Mean"], NetPort["encoder", "LogVar"]}->"KL",
                   {"MS", "KL"}->"sum"->NetPort["Loss"]}
