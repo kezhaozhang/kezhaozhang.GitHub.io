@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="370"
+   height="385"
+   tabindex="0"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="biorthogonal_basis.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7337891"
+     inkscape:cx="205.33063"
+     inkscape:cy="267.62194"
+     inkscape:window-width="1320"
+     inkscape:window-height="879"
+     inkscape:window-x="146"
+     inkscape:window-y="39"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g8" />
+  <g
+     transform="translate(40,0)"
+     id="g9">
+    <g
+       id="g8">
+      <defs
+         id="defs4">
+        <marker
+           id="a005f017-58a5-47c0-b228-b74fc80f462f"
+           refX="15"
+           refY="8"
+           markerWidth="17"
+           markerHeight="16"
+           markerUnits="userSpaceOnUse"
+           orient="auto-start-reverse">
+          <path
+             d="M 1 1 Q 7 5 16 8 Q 7 11 1 15 L 4 8 Z"
+             fill="rgb(0,0,255)"
+             stroke="none"
+             id="path1" />
+        </marker>
+        <marker
+           id="4cde4d9f-021d-46c5-8bec-8002cbc3a81d"
+           refX="15"
+           refY="8"
+           markerWidth="17"
+           markerHeight="16"
+           markerUnits="userSpaceOnUse"
+           orient="auto-start-reverse">
+          <path
+             d="M 1 1 Q 7 5 16 8 Q 7 11 1 15 L 4 8 Z"
+             fill="rgb(255,0,0)"
+             stroke="none"
+             id="path2" />
+        </marker>
+        <marker
+           id="5b1387d1-9a09-4699-a4a9-be7cb1be0c03"
+           refX="15"
+           refY="8"
+           markerWidth="17"
+           markerHeight="16"
+           markerUnits="userSpaceOnUse"
+           orient="auto-start-reverse">
+          <path
+             d="M 1 1 Q 7 5 16 8 Q 7 11 1 15 L 4 8 Z"
+             fill="rgb(0,0,255)"
+             stroke="none"
+             id="path3" />
+        </marker>
+        <marker
+           id="433afb18-e657-40f5-ad82-0286d1a046a8"
+           refX="15"
+           refY="8"
+           markerWidth="17"
+           markerHeight="16"
+           markerUnits="userSpaceOnUse"
+           orient="auto-start-reverse">
+          <path
+             d="M 1 1 Q 7 5 16 8 Q 7 11 1 15 L 4 8 Z"
+             fill="rgb(255,0,0)"
+             stroke="none"
+             id="path4" />
+        </marker>
+      </defs>
+      <path
+         vector-effect="non-scaling-stroke"
+         fill="none"
+         opacity="1"
+         stroke="rgb(0,0,255)"
+         stroke-width="1.5"
+         d="M17.838,340.541L107.027,145.946"
+         marker-end="url(#a005f017-58a5-47c0-b228-b74fc80f462f)"
+         id="path5" />
+      <path
+         vector-effect="non-scaling-stroke"
+         fill="none"
+         opacity="1"
+         stroke="rgb(255,0,0)"
+         stroke-width="1.5"
+         d="M17.838,340.541L285.405,243.243"
+         marker-end="url(#4cde4d9f-021d-46c5-8bec-8002cbc3a81d)"
+         id="path6" />
+      <path
+         vector-effect="non-scaling-stroke"
+         fill="none"
+         opacity="1"
+         stroke="rgb(0,0,255)"
+         stroke-width="1.5"
+         d="M17.838,340.541L0,282.162"
+         marker-end="url(#5b1387d1-9a09-4699-a4a9-be7cb1be0c03)"
+         id="path7"
+         style="stroke-dasharray:6,6;stroke-dashoffset:0" />
+      <path
+         vector-effect="non-scaling-stroke"
+         fill="none"
+         opacity="1"
+         stroke="rgb(255,0,0)"
+         stroke-width="1.5"
+         d="M17.838,340.541L53.514,360"
+         marker-end="url(#433afb18-e657-40f5-ad82-0286d1a046a8)"
+         id="path8"
+         style="stroke-dasharray:6,6;stroke-dashoffset:0" />
+      <text
+         xml:space="preserve"
+         style="font-size:16px;fill:#000000;stroke-width:1.492;stroke-dasharray:6, 6;stroke-dashoffset:0"
+         x="103.03931"
+         y="133.23419"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           x="103.03931"
+           y="133.23419"
+           style="font-size:16px"><tspan
+             style="font-size:17.3333px"
+             id="tspan11">v</tspan><tspan
+             style="font-size:65%;baseline-shift:sub"
+             id="tspan12">1</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;fill:#000000;stroke-width:1.492;stroke-dasharray:6, 6;stroke-dashoffset:0"
+         x="-12.252443"
+         y="268.41827"
+         id="text9-78"><tspan
+           sodipodi:role="line"
+           id="tspan9-8"
+           x="-12.252443"
+           y="268.41827"
+           style="font-size:16px"><tspan
+             style="font-size:17.3333px"
+             id="tspan11-3">w</tspan><tspan
+             style="font-size:65%;baseline-shift:sub"
+             id="tspan12-8">1</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;fill:#000000;stroke-width:1.492;stroke-dasharray:6, 6;stroke-dashoffset:0"
+         x="60.221287"
+         y="362.08511"
+         id="text9-78-6"><tspan
+           sodipodi:role="line"
+           id="tspan9-8-6"
+           x="60.221287"
+           y="362.08511"
+           style="font-size:16px"><tspan
+             style="font-size:17.3333px"
+             id="tspan11-3-7">w</tspan><tspan
+             id="tspan16"
+             style="font-size:65%;baseline-shift:sub">2</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;fill:#000000;stroke-width:1.492;stroke-dasharray:6, 6;stroke-dashoffset:0"
+         x="289.0408"
+         y="242.62703"
+         id="text9-7"><tspan
+           sodipodi:role="line"
+           id="tspan9-9"
+           x="289.0408"
+           y="242.62703"
+           style="font-size:16px"><tspan
+             style="font-size:17.3333px"
+             id="tspan11-0">v</tspan><tspan
+             id="tspan14"
+             style="font-size:65%;baseline-shift:sub">2</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#000000;stroke-width:1.492;stroke-dasharray:6, 6;stroke-dashoffset:0"
+         x="26.069916"
+         y="368.89035"
+         id="text17"><tspan
+           sodipodi:role="line"
+           id="tspan17"></tspan></text>
+    </g>
+  </g>
+</svg>
