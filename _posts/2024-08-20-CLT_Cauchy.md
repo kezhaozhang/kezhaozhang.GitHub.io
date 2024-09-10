@@ -13,7 +13,7 @@ This note demonstrates the Central Limit Theorem (CLT) using the Fourier transfo
 
 ### Central Limit Theorem
 
-The Central Limit Theorem states that the average of nn independent and identically distributed (i.i.d.) random variables approaches a normal distribution as nn becomes large, provided that the mean and variance of the random variables exist and are finite. The following derivation uses the Fourier transform to illustrate this concept.
+The Central Limit Theorem states that the average of nn independent and identically distributed (i.i.d.) random variables approaches a normal distribution as $n$ becomes large, provided that the mean and variance of the random variables exist and are finite. The following derivation uses the Fourier transform to illustrate this concept.
 
 
 
