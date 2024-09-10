@@ -27,7 +27,7 @@ $$
 
 
 
-where $\lang\cdot\rangle$ denotes the expected value,  and $\hat{p}(x)$ represents the Fourier transform of $p(x)$. If we know the Fourier transform of the PDF,  we can obtain the PDF from its inverse Fourier transform.
+where $\langle\cdot\rangle$ denotes the expected value,  and $\hat{p}(x)$ represents the Fourier transform of $p(x)$. If we know the Fourier transform of the PDF,  we can obtain the PDF from its inverse Fourier transform.
 
 
 
