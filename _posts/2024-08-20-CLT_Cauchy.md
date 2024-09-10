@@ -7,7 +7,7 @@ typora-root-url: ./..
 
 
 
-This paper demonstrates the Central Limit Theorem (CLT) using the Fourier transform of the probability density function (PDF) and emphasizes the requirement that the mean and variance of the random variable must exist. It then contrasts this with the Cauchy distribution as a counter-example, where neither the mean nor the variance is defined, illustrating why the CLT does not hold in this case.
+This note demonstrates the Central Limit Theorem (CLT) using the Fourier transform of the probability density function (PDF) and emphasizes the requirement that the mean and variance of the random variable must exist. It then contrasts this with the Cauchy distribution as a counter-example, where neither the mean nor the variance is defined, illustrating why the CLT does not hold in this case.
 
 
 
