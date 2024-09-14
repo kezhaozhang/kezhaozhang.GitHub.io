@@ -112,7 +112,7 @@ return = Times@@#&/@((1+#*0.01)&@rate);
 
 
 
-Figure 3. Illustrates the investment balances of $500$ accounts over time. All accounts start with the same balance of $1$. As time progresses, the variation among accounts increases, with a notable long tail emerging.
+Figure 3 illustrates the investment balances of $500$ accounts over time. All accounts start with the same balance of $1$. As time progresses, the variation among accounts increases, with a notable long tail emerging.
 
 
 
