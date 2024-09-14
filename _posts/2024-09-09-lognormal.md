@@ -50,7 +50,7 @@ Log-normal distributions often arise from Multiplicative processes. Consider the
 
 
 $$
-y = x_1 \cdot x_2 \cdot \cdots  x_n \label{eqn_multiplicative_process}
+y = x_1 \cdot x_2 \cdot \cdots  x_n. \label{eqn_multiplicative_process}
 $$
 
 
