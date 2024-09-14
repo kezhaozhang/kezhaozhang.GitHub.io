@@ -15,7 +15,7 @@ This note derives log-normal distribution from random multiplicative processes a
 
 The log-normal distribution is characterized by its long tails and is frequently observed in financial data and income distributions. 
 
-For example, the world per person income from the World Inequality Database (https://wid.world/data/) has a log-normal distribution. 
+For example, the world per person income from the [World Inequality Database](https://wid.world/data/) has a log-normal distribution. 
 
 
 
@@ -79,7 +79,7 @@ The probability density function (PDF) of $y$ is derived as follows. Let $p(z)$ 
 
 
 $$
-p(z) dz & = p(z(y))\left |\frac{dz}{dy}\right |dy, \\ \notag
+p(z) dz  = p(z(y))\left|\frac{dz}{dy}\right|dy,  \notag
 $$
 
 
