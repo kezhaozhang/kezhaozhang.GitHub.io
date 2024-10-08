@@ -1,6 +1,6 @@
 ---
 
-title: "Power Laws Distribution: First Return Time of a Random Walk "
+title: "Power Law Distribution: First Return Time of a Random Walk "
 date: 2024-10-07
 typora-root-url: ./..
 ---
@@ -138,5 +138,4 @@ Figure 3 illustrates the results of our simulations, showing that they agree wel
 ### Conclusion
 
 The first return time of a random walk serves as a mechanism to generate the power law distributions. This is demonstrated by approximating the exact probability using Sterling's approximation and numerical simulations, which corroborate the theoretical findings.
-
 
