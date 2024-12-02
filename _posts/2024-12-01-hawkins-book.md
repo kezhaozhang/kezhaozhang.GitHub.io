@@ -7,7 +7,7 @@ typora-root-url: ./..
 
 
 
-A Thousand Brains: A New Theory of Intelligence
+**A Thousand Brains: A New Theory of Intelligence**
 
 by Jeff Hawkins
 
