@@ -50,7 +50,7 @@ Log-normal distributions often arise from Multiplicative processes. Consider the
 
 
 $$
-y = x_1 \cdot x_2 \cdot \cdots  x_n. \label{eqn_multiplicative_process}
+y = \left(x_1 \cdot x_2 \cdot \cdots  x_n\right)^{\frac{1}{\sqrt{n}}} . \label{eqn_multiplicative_process}
 $$
 
 
@@ -59,7 +59,7 @@ Taking the logarithm of $y$:
 
 
 $$
-z = \log y = \sum_{i=1}^{n}\log x_i.\notag
+z = \log y = \frac{1}{\sqrt{n}}\sum_{i=1}^{n}\log x_i.\notag
 $$
 
 
@@ -71,7 +71,7 @@ z = \log y \sim \mathcal{N}(\mu, \sigma^2), \notag
 $$
 
 
- where $\mu$ and $\sigma^2$ are the mean and variance, respectively. 
+ where $\mu$ and $\sigma^2$ are the mean and variance of $\log{y}$, respectively. Note that the variance of $\log x_i$ is the same as that of $\log y$ and the mean of $\log x_i$ is $\mu/\sqrt{n}$. 
 
 
 
@@ -87,7 +87,7 @@ Thus, the PDF of $y$ is
 
 
 $$
-p(z(y))\left| \frac{dz}{dy} \right| = \frac{1}{\sqrt{2\pi} \sigma x} \exp\left({-\frac{(\log y -\mu)^2}{2\sigma^2}}\right).
+p(z(y))\left| \frac{dz}{dy} \right| = \frac{1}{\sqrt{2\pi} \sigma y} \exp\left({-\frac{(\log y -\mu)^2}{2\sigma^2}}\right).
 \label{eqn_lognormal_pdf}
 $$
 
