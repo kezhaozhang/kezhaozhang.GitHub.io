@@ -167,7 +167,7 @@ loss[type_] := Module[{func},
 
 
 
-### Result
+### Results
 
 We train the network in two approaches: (1) estimating $\mu$ and $\sigma$ simultaneously in a single training session and (2) training in two steps, each with a different loss function.
 
