@@ -247,7 +247,7 @@ The scatter plots for Model 2 (Figure 6) show the nonlinear relationships betwee
 
 <figure>
   <center>
-  <img src="/assets/images/residual_regression-model2_y~X+Y_ale_plots.svg" width="500">
+  <img src="/assets/images/residual_regression-model2_Y~X+Y_ale_plots.svg" width="500">
    </center>
   <center>
     <figcaption> Figure 7. ALE plots of Z ~ X +Y model using an MLP regressor.
@@ -279,7 +279,7 @@ Next, the regression of $Y$ on $X$ (Figure 8) yields the residual $Y_r$. Regress
 
 <figure>
   <center>
-  <img src="/assets/images/residual_regression-model2_y~X+Y_r_ale_plots.svg" width="500">
+  <img src="/assets/images/residual_regression-model2_Y~X+Y_r_ale_plots.svg" width="500">
    </center>
   <center>
     <figcaption> Figure 9. ALE plots of Z ~ X +Y<sub>r</sub> model using MLP regressor. Red lines represent the true dependence.
@@ -360,7 +360,7 @@ The regression of ZZ on XX and YY using a neural network regressor reveals that 
 
 <figure>
   <center>
-  <img src="/assets/images/residual_regression-model3_y~X+Y_ale_plots.svg" width="500">
+  <img src="/assets/images/residual_regression-model3_Y~X+Y_ale_plots.svg" width="500">
    </center>
   <center>
     <figcaption> Figure 13. ALE plots of Z ~ X +Y model using MLP regressor.
@@ -374,7 +374,7 @@ After regressing $Y$ on $X$, the residual $Y_r$ is used to compute the final reg
 
 <figure>
   <center>
-  <img src="/assets/images/residual_regression-model3_y~X+Y_r_ale_plots.svg" width="500">
+  <img src="/assets/images/residual_regression-model3_Y~X+Y_r_ale_plots.svg" width="500">
    </center>
   <center>
     <figcaption> Figure 14. ALE plots of Z ~ X +Y<sub>r</sub> model using MLP regressor. Red lines represent the true dependence.
