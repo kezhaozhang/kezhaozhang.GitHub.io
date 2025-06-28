@@ -1,17 +1,11 @@
 ---
 
-title: "Estimation of Distribution Parameters Revisted: Laplace's Approximation and Bayesian Inference with MCMC and VI"
+title: "Bayesian Parameter Estimation: Laplace Approximation, MCMC, and Variational Inference"
 date: 2025-06-19
 typora-root-url: ./..
 ---
 
 
-
-
-
-
-
-### Introduction
 
 In this note, we estimate distribution parameters from observed data using the posterior distribution. Essentially, the posterior contains all the information about the distribution parameters. There are various methods to infer these parameters. The exact distribution can be numerically estimated with Markov Chain Monte Carlo (MCMC) sampling. However, MCMC can be computationally intensive for large problems. Instead, approximation methods are used. One such method, called Laplace's Approximation, approximates the distribution with a multivariate normal distribution. Another method, known as variance inference (VI), approximates the posterior with a simpler distribution that is optimized to be as close as possible to the true posterior.
 
@@ -33,7 +27,7 @@ $$
 
 
 
-where  $p(x|\theta)$ is the likelihood and $p(\theta)$ is the prior. The posterior $p(\theta|x)$ fully defines the distribution of $\theta$. 
+where  $p(x\mid\theta)$ is the likelihood and $p(\theta)$ is the prior. The posterior $p(\theta\mid x)$ fully defines the distribution of $\theta$. 
 
 
 
@@ -81,14 +75,14 @@ $$
 
 
 
-Based on Equation ($\ref{eqn:laplace_approx}$), the analytical form of $p(\theta|x)$ is the PDF of a normal distribution.
+Based on Equation ($\ref{eqn:laplace_approx}$), the analytical form of $p(\theta\mid x)$ is the PDF of a normal distribution.
 $$
 
 $$
 
 ###  Bayesian Inference 
 
-The Markov Chain Monte Carlo (MCMC) method can generate samples that approach the true posterior distribution $p(\theta|x)$. However, MCMC's main drawback is the long computation time.  A  faster but less accurate alternative is the Variational Inference (VI) method. VI uses a tractable and simpler distribution $q_\phi(\theta)$ to approximate the posterior $p(\theta|x)$, where $\phi$ is the parameter defining the distribution $q$.  $\phi$ is obtained by numerical optimization that minimizes the Kullback-Leibler divergence between the distributions $q_\phi(\theta)$ and $p(\theta|x)$:
+The Markov Chain Monte Carlo (MCMC) method can generate samples that approach the true posterior distribution $p(\theta\mid x)$. However, MCMC's main drawback is the long computation time.  A  faster but less accurate alternative is the Variational Inference (VI) method. VI uses a tractable and simpler distribution $q_\phi(\theta)$ to approximate the posterior $p(\theta\mid x)$, where $\phi$ is the parameter defining the distribution $q$.  $\phi$ is obtained by numerical optimization that minimizes the Kullback-Leibler divergence between the distributions $q_\phi(\theta)$ and $p(\theta\mid x)$:
 
 
 
@@ -113,11 +107,11 @@ $$
 
 
 
-To minimize the KL divergence, we instead maximize the ELBO instead to find the best distribution $q_\phi(\theta)$ to approximate the posterior $p(\theta|x)$.
+To minimize the KL divergence, we instead maximize the ELBO instead to find the best distribution $q_\phi(\theta)$ to approximate the posterior $p(\theta \mid x)$.
 
 
 
-The joint distribution $p(\theta, x)$ is used because the posterior $p(\theta|x)$ is unknown, whereas $p(\theta,x)=p(x|\theta)p(\theta)$ is known from the likelihood and prior. 
+The joint distribution $p(\theta, x)$ is used because the posterior $p(\theta|x)$ is unknown, whereas $p(\theta,x)=p(x\mid \theta)p(\theta)$ is known from the likelihood and prior. 
 
 
 
@@ -390,7 +384,7 @@ The covariance is of $\mu$ and $\sigma$ in the MCMC samples is $-0.0012$, indica
 
 
 
-Variational inference offers a faster alternative to MCMC by approximating the  posterior $p(\theta|x)$ with a simpler, parameterized distribution $q_\phi(\theta)$.  Assuming independence between $\mu$ and $\sigma$, we use a mean-field approximation:
+Variational inference offers a faster alternative to MCMC by approximating the  posterior $p(\theta\mid x)$ with a simpler, parameterized distribution $q_\phi(\theta)$.  Assuming independence between $\mu$ and $\sigma$, we use a mean-field approximation:
 
 
 
@@ -513,7 +507,7 @@ Figure 5 shows strong agreement between the MCMC and VI results. This is largely
 
 <figure>
   <center>
-  <img src="/assets/images/BI_norm_mcmc_vs_VI.svg" width="750">
+  <img src="/assets/images/BI_norm_MCMC_vs_VI.svg" width="750">
    </center>
   <center>
     <figcaption> Figure 5. Comparison of MCMC and VI results. Histograms represent MCMC samples; solid lines are probability densities from VI.
@@ -524,11 +518,12 @@ Figure 5 shows strong agreement between the MCMC and VI results. This is largely
 
 
 
+
 #### Example 2: Beta Distribuiton
 
 
 
-In this example, 1,000 samples are generated from a known Beta distribution.  The PDF of a Beta distribution $\Beta(\alpha, \beta)$ is 
+In this example, 1,000 samples are generated from a known Beta distribution.  The PDF of a Beta distribution $\mathrm{B}(\alpha, \beta)$ is 
 
 
 
