@@ -249,7 +249,7 @@ $$
 \frac{\partial^2\log p}{\partial\mu^2} & = -\frac{N}{\sigma^2}\\ \notag
 \frac{\partial^2\log p}{\partial\sigma^2} & = \frac{N}{\sigma^2}-\frac{3N}{\sigma^4}\left[(\mu-\bar{x})^2+(\overline{x^2} - \bar{x}^2)\right]. \notag
 
-\end{align}
+\end{align} \notag
 $$
 
 
