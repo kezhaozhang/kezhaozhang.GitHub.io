@@ -76,9 +76,8 @@ $$
 
 
 Based on Equation ($\ref{eqn:laplace_approx}$), the analytical form of $p(\theta\mid x)$ is the PDF of a normal distribution.
-$$
 
-$$
+
 
 ###  Bayesian Inference 
 
@@ -111,7 +110,7 @@ To minimize the KL divergence, we instead maximize the ELBO instead to find the 
 
 
 
-The joint distribution $p(\theta, x)$ is used because the posterior $p(\theta|x)$ is unknown, whereas $p(\theta,x)=p(x\mid \theta)p(\theta)$ is known from the likelihood and prior. 
+The joint distribution $p(\theta, x)$ is used because the posterior $p(\theta\mid x)$ is unknown, whereas $p(\theta,x)=p(x\mid \theta)p(\theta)$ is known from the likelihood and prior. 
 
 
 
@@ -125,6 +124,8 @@ $$
 
 
 where $\theta = \left[\theta_1, \ldots, \theta_k, \ldots\right]$.
+
+
 
 
 
