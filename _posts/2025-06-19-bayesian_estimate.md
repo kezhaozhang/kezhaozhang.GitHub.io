@@ -79,7 +79,11 @@ Based on Equation ($\ref{eqn:laplace_approx}$), the analytical form of $p(\theta
 
 
 
+
+
 ###  Bayesian Inference 
+
+
 
 The Markov Chain Monte Carlo (MCMC) method can generate samples that approach the true posterior distribution $p(\theta\mid x)$. However, MCMC's main drawback is the long computation time.  A  faster but less accurate alternative is the Variational Inference (VI) method. VI uses a tractable and simpler distribution $q_\phi(\theta)$ to approximate the posterior $p(\theta\mid x)$, where $\phi$ is the parameter defining the distribution $q$.  $\phi$ is obtained by numerical optimization that minimizes the Kullback-Leibler divergence between the distributions $q_\phi(\theta)$ and $p(\theta\mid x)$:
 
@@ -90,7 +94,7 @@ $$
 D_{KL}(q||p) &= \int_{\theta \sim q} q_\phi (\theta)\log\frac{q_\phi(\theta)}{p(\theta|x)} d\theta\\ \notag
 &= \int_{\theta \sim q}q_\phi (\theta)\log\frac{q_\phi(\theta)p(x)}{p(\theta, x)} d\theta \\ \notag
 &= \log p(x) -\left( E_q\left[\log p(\theta, x)\right]-E_q\left[q_\phi(\theta)\right]\right)
-\end{align}
+\end{align}\notag
 $$
 
 
@@ -119,7 +123,7 @@ One special form of $q_\phi(\theta)$ is the mean-field approximation, where the 
 
 
 $$
-q_\phi(\theta) =\Pi_k q_\phi (\theta_k),
+q_\phi(\theta) =\Pi_k q_\phi (\theta_k), \notag
 $$
 
 
@@ -220,7 +224,7 @@ where $\bar{x}=\sum_i x_i/N$ and $\overline{x^2}=\sum_i x_i^2/N$.  For example,
 
 
 $$
-p(\mu)=\int p(\mu, \sigma) d\sigma \propto N^{\frac{1-N}{2}} \left((\mu-\bar{x})^2 +(\overline{x^2}-\bar{x}^2)\right)^{\frac{1-N}{2}},
+p(\mu)=\int p(\mu, \sigma) d\sigma \propto N^{\frac{1-N}{2}} \left((\mu-\bar{x})^2 +(\overline{x^2}-\bar{x}^2)\right)^{\frac{1-N}{2}}, \notag
 $$
 
 
@@ -243,7 +247,7 @@ $$
 \frac{\partial \log p}{\partial \mu}&=-\frac{N}{\sigma^2}(\mu -\bar{x})\\ \notag
 \frac{\partial^2\log p}{\partial \sigma\partial\mu} & = \frac{\partial^2\log p}{\partial \mu\partial\sigma} = \frac{2N}{\sigma^3}(\mu - \bar{x})\\ \notag
 \frac{\partial^2\log p}{\partial\mu^2} & = -\frac{N}{\sigma^2}\\ \notag
-\frac{\partial^2\log p}{\partial\sigma^2} & = \frac{N}{\sigma^2}-\frac{3N}{\sigma^4}\left[(\mu-\bar{x})^2+(\overline{x^2} - \bar{x}^2)\right].
+\frac{\partial^2\log p}{\partial\sigma^2} & = \frac{N}{\sigma^2}-\frac{3N}{\sigma^4}\left[(\mu-\bar{x})^2+(\overline{x^2} - \bar{x}^2)\right]. \notag
 
 \end{align}
 $$
@@ -255,7 +259,7 @@ At the  posterior,  denoted by $\hat{\mu}$ and $\hat{\sigma}$,   the gradient of
 
 
 $$
-\frac{\partial\log p}{\partial \sigma}|_{\mu=\hat{\mu}, \sigma=\hat{\sigma}}=\frac{\partial\log p}{\partial \mu}|_{\mu=\hat{\mu}. \notag \sigma=\hat{\sigma}}=0, 
+\frac{\partial\log p}{\partial \sigma}|_{\mu=\hat{\mu}, \sigma=\hat{\sigma}}=\frac{\partial\log p}{\partial \mu}|_{\mu=\hat{\mu}. \sigma=\hat{\sigma}}=0,\notag 
 $$
 
 
@@ -268,7 +272,7 @@ $$
 \begin{align} \notag
 \hat{\mu} &= \bar{x}\\ \notag
 \hat{\sigma} &= \sqrt{\overline{x^2}-\bar{x}^2}. \notag
-\end{align}
+\end{align} \notag
 $$
 
 
@@ -410,7 +414,7 @@ and $\sigma >0$ using a log-normal distribution:
 
 
 $$
-\sigma \sim \mathrm{Lognormal}(\phi_3, \exp(\phi_4)).
+\sigma \sim \mathrm{Lognormal}(\phi_3, \exp(\phi_4)). \notag
 $$
 
 
