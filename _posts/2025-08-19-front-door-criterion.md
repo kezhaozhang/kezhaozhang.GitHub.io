@@ -84,7 +84,7 @@ The key properties of the model are:
 
 -  $Z$ blocks all direct paths from $X$ to $Y$.
 -  There is no unblocked backdoor path from $X$ to $Z$. 
-- All backdoor paths from $Z$ to $Y$ are blocked by $X$. $
+- All backdoor paths from $Z$ to $Y$ are blocked by $X$. 
 
 Thus, $Z$ satisfies the front-door criterion. 
 
