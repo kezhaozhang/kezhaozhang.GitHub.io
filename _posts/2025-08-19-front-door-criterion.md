@@ -220,6 +220,8 @@ $$
 & =0.045,
 \end{align}
 $$
+
+
 a $4.5\%$ increase in cancer risk due to smoking.
 
 
@@ -228,7 +230,7 @@ Similarly,  benefit of not smoking is:
 
 
 $$
-P(Y=\mathrm{No\ \ Cancer}\mid X=\mathrm{Nonsmokers}) - P(Y=\mathrm{No\ \ Cancer}\mid X=\mathrm{Smokers}) =0.045.
+P(Y=\mathrm{No\ \ Cancer}\mid X=\mathrm{Nonsmokers}) - P(Y=\mathrm{No\ \ Cancer}\mid X=\mathrm{Smokers}) =0.045.\notag
 $$
 
 
@@ -261,7 +263,7 @@ Consider DAG in figure 2, where $Z$ is a confounder of $X$ and $Y$. To estimate 
 
 <figure>
   <center>
-  <img src="/assets/images/frontdoor_backdoor-scm.svg" width="200">
+  <img src="/assets/images/frontdoor_backdoor-SCM.svg" width="200">
    </center>
   <center>
     <figcaption> Figure 2. Original DAG.
