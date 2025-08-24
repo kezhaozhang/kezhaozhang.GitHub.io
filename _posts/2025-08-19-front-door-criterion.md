@@ -178,7 +178,6 @@ Using Table 1, we compute the proabilities needed for Equation ($\ref{eqn:front-
 | No Tar | Nonsmokers |               0.9               |
 
 
-#### 
 
 |  $Z$   |    $X$     | $P(Y=\mathrm{No\ \ Cancer}\mid Z, X)$ |
 | :----: | :--------: | :-----------------------------------: |
