@@ -200,7 +200,7 @@ We have
 $$
 \hat{\beta} = \frac{U(0)}{I(0)}.\label{beta_hat}
 $$
- 
+
 
 Plug ($\ref{beta_hat}$) into ($\ref{llr_expand}$),  we have the statistic $\lambda_\text{Likelihood-ratio}$:
 
@@ -251,7 +251,7 @@ The variance of $U(\beta)$ is defined as
 $$
 \text{Var}(U(\beta_0)) = E_{\beta_0}\left[\left(U(\beta_0)-E_{\beta_0}(U(\beta_0)\right)^2)\right] = E_{\beta_0}\left[U(\beta_0)^2\right] \notag
 $$
- 
+
 
 Since the mean is zero, this simplifies to:
 
@@ -359,7 +359,7 @@ $$
 \frac{\partial U(\beta)}{\partial \beta}\bigg\rvert_{\beta=0} & = - \sum_{j=1}^K d_j \frac{\left(\sum\limits_{l\in R(t_j)}x_l^2\exp(\beta x_l)\right)\left(\sum\limits_{l \in R(t_j)}\exp(\beta x_l)\right) - \left(\sum\limits_{l\in R(t_j)}x_l \exp(\beta x_l)\right)^2}{\left(\sum\limits_{l \in R(t_j)}\exp(\beta x_l)\right)^2}\Bigg\rvert_{\beta=0} \\ \notag
 & = -\sum_{j = 1}^K d_j\left[\frac{n_{1j}}{n_j} -\left(\frac{n_{1j}}{n_j}\right)^2\right] \\ \notag
 & = -\sum_{j=1}^K d_j \left(\frac{n_{1j}}{n_j}\right)\left(\frac{n_j - n_{1j}}{n_j}\right) \\ \notag
-& = - \sum_{j=1}^K d_j \left(\frac{n_{0j}}{n_j}\right)\left(\frac{n_{1j}}{n_j}\right)
+& = - \sum_{j=1}^K d_j \left(\frac{n_{0j}}{n_j}\right)\left(\frac{n_{1j}}{n_j}\right) \notag
 \end{align}.
 $$
 
@@ -381,7 +381,7 @@ $$
 & \approx - \frac{\partial U(\beta)}{\partial \beta}\bigg\rvert_{\beta=0} \\ \notag
 & = \sum_{j=1}^K d_j \left(\frac{n_{1j}}{n_j}\right)\left(\frac{n_j - n_{1j}}{n_j}\right) \\ \notag
 & =  \sum_{j=1}^K d_j \left(\frac{n_{0j}}{n_j}\right)\left(\frac{n_{1j}}{n_j}\right) \notag
-\end{align}
+\end{align} \notag
 $$
 
 
@@ -502,7 +502,7 @@ Using the counts from the event-time breakdown, we calculate the observed and ex
 ##### Log-rank Test Result
 
 $$
-\lambda_{\text{Log-rank}} = \frac{\left(\sum_j \left(O_{1j}-E_{1j}\right)\right)^2}{\sum_j V_j} = \frac{\left(\sum_j \left(O_{0j}-E_{0j}\right)\right)^2}{\sum_j V_j} = \frac{0.2381^2}{1.167} = 0.0486.
+\lambda_{\text{Log-rank}} = \frac{\left(\sum_j \left(O_{1j}-E_{1j}\right)\right)^2}{\sum_j V_j} = \frac{\left(\sum_j \left(O_{0j}-E_{0j}\right)\right)^2}{\sum_j V_j} = \frac{0.2381^2}{1.167} = 0.0486. \notag
 $$
 
 
@@ -515,7 +515,7 @@ The p-value = 0.8255.
 
 
 $$
-\lambda_{\text{Likelihood-ratio}} = \frac{\left(\sum_j \left(O_{1j}-E_{1j}\right)\right)^2}{\sum_j W_j} = \frac{\left(\sum_j \left(O_{0j}-E_{0j}\right)\right)^2}{\sum_j W_j} = \frac{0.2381^2}{1.467} = 0.0386
+\lambda_{\text{Likelihood-ratio}} = \frac{\left(\sum_j \left(O_{1j}-E_{1j}\right)\right)^2}{\sum_j W_j} = \frac{\left(\sum_j \left(O_{0j}-E_{0j}\right)\right)^2}{\sum_j W_j} = \frac{0.2381^2}{1.467} = 0.0386 \notag
 $$
 
 
@@ -606,7 +606,6 @@ Likelihood ratio test. In Wikipedia.  https://en.wikipedia.org/wiki/Likelihood-r
 Fisher Information.  In Wikipedia. https://en.wikipedia.org/wiki/Fisher_information
 
 Wilk's Theorem.  In Wikipedia.  https://en.wikipedia.org/wiki/Wilks%27_theorem
-
 
 
 
