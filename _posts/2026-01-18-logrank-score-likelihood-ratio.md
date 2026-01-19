@@ -234,8 +234,8 @@ E_{\beta_0}(U(\beta_0)) &= \int U(\beta_0) L(x\mid \beta_0)dx \\ \notag
 & = \int \frac{\partial L}{\partial \beta} dx \\ \notag
 & = \frac{\partial}{\partial \beta}\int L dx \\ \notag
 & = \frac{\partial 1}{\partial \beta} \\\notag
-& = 0,
-\end{align}
+& = 0, \notag
+\end{align} \notag
 $$
 
 
@@ -360,7 +360,7 @@ $$
 & = -\sum_{j = 1}^K d_j\left[\frac{n_{1j}}{n_j} -\left(\frac{n_{1j}}{n_j}\right)^2\right] \\ \notag
 & = -\sum_{j=1}^K d_j \left(\frac{n_{1j}}{n_j}\right)\left(\frac{n_j - n_{1j}}{n_j}\right) \\ \notag
 & = - \sum_{j=1}^K d_j \left(\frac{n_{0j}}{n_j}\right)\left(\frac{n_{1j}}{n_j}\right) \notag
-\end{align}.
+\end{align}.\notag
 $$
 
 
