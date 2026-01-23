@@ -242,8 +242,3 @@ Uncertainty in reliability comaprisons stems from finite sampling and data censo
 This result shows that while hazard ratio is noisy in small trials, the log-rank test remains a reliable metric for statistical validity.
 
 
-
-
-
-
-
