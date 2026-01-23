@@ -197,8 +197,10 @@ This confirms that the log-rank test consistently controls the false positive ra
 Censoring occurs when a faikure is not observed within the study periosd. We simulated this by applying a cut-off threshold to the lifetime data. 
 
 - Hazard ratio (Figure 5): Increased censoring increases the variance of the hazard ratio.
+
 - P-value (Figure 6): The p-value distribution remains robust and insenitive to the censoring proportion.
-- 
+
+  
 
 <figure>
   <center>
