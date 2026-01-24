@@ -52,12 +52,12 @@ If we assume a noninformative prior for $\theta$, we can use a uniform distribut
 
 
 $$
-p(\theta\mid N, m) =\frac{\theta^{\alpha -1} (1-\theta)^{\beta-1}}{\Beta(\alpha, \beta)},\notag
+p(\theta\mid N, m) =\frac{\theta^{\alpha -1} (1-\theta)^{\beta-1}}{B(\alpha, \beta)},\notag
 $$
 
 
 
-where $\Beta(\alpha, \beta)$ is the Beta function, defined using Gamma functions as  $\Beta(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$. 
+where $B(\alpha, \beta)$ is the Beta function, defined using Gamma functions as  $B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$. 
 
 
 
@@ -147,5 +147,5 @@ This analysis demonstrates that the posterior distribution of a failure rate is 
 
 ### References
 
-Beta distribution. In Wikipedia.  https://en.wikipedia.org/w/index.php?title=Beta_distribution&oldid=1319727228 
+Beta distribution. In Wikipedia.  https://en.wikipedia.org/wiki/Beta_distribution
 
