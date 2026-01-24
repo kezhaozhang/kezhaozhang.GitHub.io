@@ -73,7 +73,7 @@ Mathematically, the confidence $C$ that $\theta<\theta_0$  is the Cumulative Dis
 $$
 C = \int_0^{\theta_0} p(\theta\mid N, m) d \theta = I_{\theta_0}(m+1, N-m +1), \label{eqn:cdf}
 $$
- 
+
 
 where $I_{\theta_0}$ is the regularized incomplete beta function.
 
@@ -148,8 +148,4 @@ This analysis demonstrates that the posterior distribution of a failure rate is 
 ### References
 
 Beta distribution. In Wikipedia.  https://en.wikipedia.org/w/index.php?title=Beta_distribution&oldid=1319727228 
-
-
-
-
 
