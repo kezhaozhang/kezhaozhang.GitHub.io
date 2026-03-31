@@ -73,7 +73,7 @@ Figure 2 shows the Kaplan-Meier (KM) survival plots for the two cases. In Scenar
 
 <figure>
   <center>
-  <img src="/assets/images/survival_plots_censoring_A_and_B.svg" width="650">
+  <img src="/assets/images/survival_plots_censoring_A_and_b.svg" width="650">
    </center>
   <center>
     <figcaption> 
